@@ -23,21 +23,24 @@
         </van-image>
       </van-swipe-item>
     </van-swipe>
+    <Report :caseinfo="caseInfo"></Report>
   </div>
 </template>
 
 <script>
 import dayjs from 'dayjs'
 import Count from '@/components/Count'
+import Report from '@/components/Report'
 
 export default {
   name: 'Information',
-  components: { Count },
+  components: { Count, Report },
   data() {
     return {
       date: '',
       images: [],
-      countInfo: () => {}
+      countInfo: () => {},
+      caseInfo: []
     }
   },
   created() {
@@ -84,6 +87,7 @@ export default {
           color: '#28b7a3'
         }
       ]
+      this.caseInfo = [...newsList.case].reverse()
     }
   }
 }

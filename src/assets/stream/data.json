@@ -1,0 +1,197 @@
+[{
+    "id": 1,
+    "provinceShortName": "河北",
+    "children": [{
+      "cityName": "石家庄市",
+      "mediaName": "",
+      "streamUrl": "https://web.guangdianyun.tv/live/36847?uin=1652",
+      "streamPoster": ""
+    }]
+  },
+  {
+    "id": 2,
+    "provinceShortName": "湖北",
+    "children": [{
+        "cityName": "襄阳市",
+        "mediaName": "襄阳电视台",
+        "streamUrl": "https://web.guangdianyun.tv/live/36767?uin=1500",
+        "streamPoster": ""
+      },
+      {
+        "cityName": "十堰市",
+        "mediaName": "十堰日报",
+        "streamUrl": "https://web.guangdianyun.tv/live/36780?uin=1318",
+        "streamPoster": ""
+      }, {
+        "cityName": "襄阳市南漳县",
+        "mediaName": "南漳县融媒体中心",
+        "streamUrl": "https://web.guangdianyun.tv/live/36809?uin=1577",
+        "streamPoster": ""
+      }, {
+        "cityName": "宜昌市秭归县",
+        "mediaName": "秭归县融媒体中心",
+        "streamUrl": "https://web.guangdianyun.tv/live/36770?uin=2050",
+        "streamPoster": ""
+      },
+      {
+        "cityName": "孝感市",
+        "mediaName": "孝感电视台",
+        "streamUrl": "http://x.xgnews.cn/live/36749?uin=1114",
+        "streamPoster": ""
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "provinceShortName": "浙江",
+    "children": [{
+        "cityName": "杭州市余杭区",
+        "mediaName": "杭州市余杭区融媒体中心",
+        "streamUrl": "https://tv.yhtv.com.cn/live/36936?uin=1024",
+        "streamPoster": ""
+      },
+      {
+        "cityName": "湖州市长兴县",
+        "mediaName": "长兴传媒集团",
+        "streamUrl": "https://web.guangdianyun.tv/live/36750?uin=1799",
+        "streamPoster": ""
+      }, {
+        "cityName": "宁波市",
+        "mediaName": "宁波晚报",
+        "streamUrl": "https://web.guangdianyun.tv/live/36763?uin=1791",
+        "streamPoster": ""
+      }, {
+        "cityName": "金华市兰溪市",
+        "mediaName": "兰溪市融媒体中心",
+        "streamUrl": "https://web.guangdianyun.tv/piclive?id=1275&uin=1324",
+        "streamPoster": ""
+      }, {
+        "cityName": "温州市",
+        "mediaName": "温州广播电视传媒集团",
+        "streamUrl": "https://web.guangdianyun.tv/live/36886?uin=1796",
+        "streamPoster": ""
+      }, {
+        "cityName": "温州市永嘉县",
+        "mediaName": "永嘉传媒集团",
+        "streamUrl": "https://web.guangdianyun.tv/piclive?id=1267&uin=2768",
+        "streamPoster": ""
+      },
+      {
+        "cityName": "嘉兴市桐乡市",
+        "mediaName": "桐乡市传媒中心",
+        "streamUrl": "https://web.guangdianyun.tv/piclive?id=1274&uin=1043",
+        "streamPoster": ""
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "provinceShortName": "湖南",
+    "children": [{
+        "cityName": "常德津市",
+        "mediaName": "津市融媒体",
+        "streamUrl": "https://web.guangdianyun.tv/piclive?id=1281&uin=2269",
+        "streamPoster": ""
+      },
+      {
+        "cityName": "邵阳县",
+        "mediaName": "邵阳新闻网",
+        "streamUrl": "https://web.guangdianyun.tv/piclive?id=1272&uin=1261",
+        "streamPoster": ""
+      },
+      {
+        "cityName": "长沙市",
+        "mediaName": "智慧长沙",
+        "streamUrl": "https://web.guangdianyun.tv/live/36971?uin=1648",
+        "streamPoster": ""
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "provinceShortName": "山东",
+    "children": [{
+      "cityName": "聊城市",
+      "mediaName": "莘县广播电视中心",
+      "streamUrl": "https://web.guangdianyun.tv/live/36756?uin=2286",
+      "streamPoster": ""
+    }]
+  },
+  {
+    "id": 6,
+    "provinceShortName": "辽宁",
+    "children": [{
+      "cityName": "鞍山市",
+      "mediaName": "鞍山广播电视台",
+      "streamUrl": "https://web.guangdianyun.tv/live/36753?uin=2476",
+      "streamPoster": ""
+    }]
+  },
+  {
+    "id": 7,
+    "provinceShortName": "江苏",
+    "children": [{
+      "cityName": "南通市如皋市",
+      "mediaName": "如皋市融媒体中心",
+      "streamUrl": "http://live.erugao.cn/live/36925?uin=1545",
+      "streamPoster": ""
+    }]
+  },
+  {
+    "id": 8,
+    "provinceShortName": "青海",
+    "children": [{
+      "cityName": "海西蒙古族藏族自治州格尔木市",
+      "mediaName": "格尔木电视台",
+      "streamUrl": "https://web.guangdianyun.tv/live/36905?uin=2642",
+      "streamPoster": ""
+    }]
+  },
+  {
+    "id": 9,
+    "provinceShortName": " 黑龙江",
+    "children": [{
+      "cityName": "大庆市",
+      "mediaName": "",
+      "streamUrl": "https://web.guangdianyun.tv/live/36825?uin=1463",
+      "streamPoster": ""
+    }]
+  },
+  {
+    "id": 10,
+    "provinceShortName": "山西",
+    "children": [{
+      "cityName": "长治市潞城区",
+      "mediaName": "",
+      "streamUrl": "https://web.guangdianyun.tv/live/36944?uin=1888",
+      "streamPoster": ""
+    }]
+  },
+  {
+    "id": 11,
+    "provinceShortName": "河南",
+    "children": [{
+      "cityName": "商丘市夏邑县",
+      "mediaName": "",
+      "streamUrl": "https://web.guangdianyun.tv/radio/?id=174&uin=1793",
+      "streamPoster": ""
+    }]
+  },
+  {
+    "id": 12,
+    "provinceShortName": "云南",
+    "children": [{
+        "cityName": "普洱市",
+        "mediaName": "",
+        "streamUrl": "https://web.guangdianyun.tv/live/36946?uin=1670",
+        "streamPoster": ""
+      },
+      {
+        "cityName": "普洱市孟连县",
+        "mediaName": "",
+        "streamUrl": "https://web.guangdianyun.tv/piclive?id=1299&uin=1414",
+        "streamPoster": ""
+      }
+    ]
+  }
+]
