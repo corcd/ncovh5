@@ -1,22 +1,33 @@
 <template>
   <div class="infomation">
     <div class="introduction">
-      <span class="info-time">截至 2020-02-04 09:39 全国数据统计</span>
+      <span class="info-time">截至 {{ date }} 全国数据统计</span>
     </div>
     <div class="info-count">
       <Count
-        v-for="item in countInfo"
-        :key="item.title"
+        v-for="(item, index) in countInfo"
+        :key="index"
         :title="item.title"
         :count="item.count"
         :incr="item.incr"
         :color="item.color"
       ></Count>
     </div>
+    <van-swipe class="info-images" :autoplay="5000">
+      <van-swipe-item v-for="(image, index) in images" :key="index">
+        <van-image fit="contain" :src="image">
+          <template v-slot:loading>
+            <van-loading type="spinner" size="20" />
+          </template>
+          <template v-slot:error>加载失败</template>
+        </van-image>
+      </van-swipe-item>
+    </van-swipe>
   </div>
 </template>
 
 <script>
+import dayjs from 'dayjs'
 import Count from '@/components/Count'
 
 export default {
@@ -24,10 +35,12 @@ export default {
   components: { Count },
   data() {
     return {
+      date: '',
+      images: [],
       countInfo: () => {}
     }
   },
-  mounted() {
+  created() {
     this.getNcovInfo()
   },
   methods: {
@@ -37,6 +50,8 @@ export default {
       }
       const res = await this.$api.tianapi.ncov(data)
       const newsList = res.data.newslist[0]
+      this.date = dayjs(newsList.desc.modifyTime).format('YYYY-MM-DD HH:mm:ss')
+      this.images = [...newsList.desc.dailyPics]
       this.countInfo = [
         {
           title: '确诊',
@@ -99,6 +114,11 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 2% 0;
+  }
+
+  .info-images {
+    width: 100%;
+    padding: 4% 0;
   }
 }
 </style>
