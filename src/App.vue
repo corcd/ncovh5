@@ -4,6 +4,27 @@
   </div>
 </template>
 
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  created() {
+    this.getNcovInfo()
+  },
+  methods: {
+    ...mapActions(['setGlobalData']),
+    async getNcovInfo() {
+      const data = {
+        key: '115d31d6719afd73bcaad096fac0cb2b'
+      }
+      const res = await this.$api.tianapi.ncov(data)
+      const newsList = res.data.newslist[0]
+      this.setGlobalData(newsList)
+    }
+  }
+}
+</script>
+
 <style lang="scss">
 #app {
   width: 100%;

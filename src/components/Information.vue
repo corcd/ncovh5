@@ -1,11 +1,11 @@
 <template>
   <div class="infomation">
     <div class="introduction">
-      <span class="info-time">截至 {{ date }} 全国数据统计</span>
+      <span class="info-time">截至 {{ getTime }} 全国数据统计</span>
     </div>
     <div class="info-count">
       <Count
-        v-for="(item, index) in countInfo"
+        v-for="(item, index) in getCount"
         :key="index"
         :title="item.title"
         :count="item.count"
@@ -14,7 +14,7 @@
       ></Count>
     </div>
     <van-swipe class="info-images" :autoplay="5000">
-      <van-swipe-item v-for="(image, index) in images" :key="index">
+      <van-swipe-item v-for="(image, index) in desc.dailyPics" :key="index">
         <van-image fit="contain" :src="image">
           <template v-slot:loading>
             <van-loading type="spinner" size="20" />
@@ -23,11 +23,12 @@
         </van-image>
       </van-swipe-item>
     </van-swipe>
-    <Report :caseinfo="caseInfo"></Report>
+    <Report></Report>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import dayjs from 'dayjs'
 import Count from '@/components/Count'
 import Report from '@/components/Report'
@@ -35,59 +36,44 @@ import Report from '@/components/Report'
 export default {
   name: 'Information',
   components: { Count, Report },
-  data() {
-    return {
-      date: '',
-      images: [],
-      countInfo: () => {},
-      caseInfo: []
-    }
-  },
-  created() {
-    this.getNcovInfo()
-  },
-  methods: {
-    async getNcovInfo() {
-      const data = {
-        key: '115d31d6719afd73bcaad096fac0cb2b'
-      }
-      const res = await this.$api.tianapi.ncov(data)
-      const newsList = res.data.newslist[0]
-      this.date = dayjs(newsList.desc.modifyTime).format('YYYY-MM-DD HH:mm:ss')
-      this.images = [...newsList.desc.dailyPics]
-      this.countInfo = [
+  computed: {
+    ...mapState(['desc', 'case']),
+    getTime() {
+      return dayjs(this.desc.modifyTime).format('YYYY-MM-DD HH:mm:ss')
+    },
+    getCount() {
+      return [
         {
           title: '确诊',
-          count: newsList.desc.confirmedCount,
-          incr: newsList.desc.confirmedIncr,
+          count: this.desc.confirmedCount,
+          incr: this.desc.confirmedIncr,
           color: '#f74c31'
         },
         {
           title: '疑似',
-          count: newsList.desc.suspectedCount,
-          incr: newsList.desc.suspectedIncr,
+          count: this.desc.suspectedCount,
+          incr: this.desc.suspectedIncr,
           color: '#f78207'
         },
         {
           title: '危重',
-          count: newsList.desc.seriousCount,
-          incr: newsList.desc.seriousIncr,
+          count: this.desc.seriousCount,
+          incr: this.desc.seriousIncr,
           color: '#a25a4e'
         },
         {
           title: '死亡',
-          count: newsList.desc.deadCount,
-          incr: newsList.desc.deadIncr,
+          count: this.desc.deadCount,
+          incr: this.desc.deadIncr,
           color: '#5d7092'
         },
         {
           title: '治愈',
-          count: newsList.desc.curedCount,
-          incr: newsList.desc.curedIncr,
+          count: this.desc.curedCount,
+          incr: this.desc.curedIncr,
           color: '#28b7a3'
         }
       ]
-      this.caseInfo = [...newsList.case].reverse()
     }
   }
 }

@@ -6,7 +6,7 @@
       <div class="item-dead item-dead-title">死亡</div>
       <div class="item-cured item-cured-title">治愈</div>
     </div>
-    <div class="item" v-for="(item, index) in caseinfo" :key="index">
+    <div class="item" v-for="(item, index) in getCase" :key="index">
       <div class="item-province">{{ item.provinceShortName }}</div>
       <div class="item-confirmed">{{ item.confirmedCount }}</div>
       <div class="item-dead">{{ item.deadCount }}</div>
@@ -16,17 +16,20 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'Report',
-  props: {
-    caseinfo: {
-      type: Array,
-      default: () => []
-    }
-  },
   data() {
     return {
       activeName: '0'
+    }
+  },
+  computed: {
+    ...mapState(['case']),
+    getCase() {
+      const caseInfo = [...this.case].reverse()
+      return caseInfo
     }
   }
 }
