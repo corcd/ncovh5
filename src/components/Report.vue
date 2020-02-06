@@ -28,8 +28,8 @@ export default {
   computed: {
     ...mapState(['case']),
     getCase() {
-      const caseInfo = [...this.case].reverse()
-      return caseInfo
+      const arr = this.case ? this.case : []
+      return arr
     }
   }
 }

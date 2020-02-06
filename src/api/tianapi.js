@@ -8,6 +8,11 @@ const tianapi = {
     return Request.get(`https://api.tianapi.com/txapi/ncov/index`, {
       data
     })
+  },
+  case(data) {
+    return Request.get(`http://api.tianapi.com/txapi/ncovcity/index`, {
+      data
+    })
   }
 }
 

@@ -13,6 +13,7 @@
         :color="item.color"
       ></Count>
     </div>
+    <Map></Map>
     <van-swipe class="info-images" :autoplay="5000">
       <van-swipe-item v-for="(image, index) in desc.dailyPics" :key="index">
         <van-image fit="contain" :src="image">
@@ -31,11 +32,12 @@
 import { mapState } from 'vuex'
 import dayjs from 'dayjs'
 import Count from '@/components/Count'
+import Map from '@/components/Map'
 import Report from '@/components/Report'
 
 export default {
   name: 'Information',
-  components: { Count, Report },
+  components: { Count, Map, Report },
   computed: {
     ...mapState(['desc', 'case']),
     getTime() {

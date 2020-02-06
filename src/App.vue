@@ -12,14 +12,15 @@ export default {
     this.getNcovInfo()
   },
   methods: {
-    ...mapActions(['setGlobalData']),
+    ...mapActions(['setGlobalData', 'setCaseData']),
     async getNcovInfo() {
       const data = {
         key: '115d31d6719afd73bcaad096fac0cb2b'
       }
-      const res = await this.$api.tianapi.ncov(data)
-      const newsList = res.data.newslist[0]
-      this.setGlobalData(newsList)
+      const ncovRes = await this.$api.tianapi.ncov(data)
+      const caseRes = await this.$api.tianapi.case(data)
+      this.setGlobalData(ncovRes.data.newslist[0])
+      this.setCaseData(caseRes.data.newslist)
     }
   }
 }

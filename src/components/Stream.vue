@@ -25,9 +25,6 @@ export default {
     return {
       data: DATA
     }
-  },
-  mounted() {
-    console.log(this.data)
   }
 }
 </script>

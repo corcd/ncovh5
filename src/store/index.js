@@ -12,13 +12,18 @@ export default new Vuex.Store({
   mutations: {
     setGlobalData(state, obj) {
       state.news = obj.news
-      state.case = obj.case
       state.desc = obj.desc
+    },
+    setCaseData(state, arr) {
+      state.case = arr
     }
   },
   actions: {
     setGlobalData(context, obj) {
       context.commit('setGlobalData', obj)
+    },
+    setCaseData(context, arr) {
+      context.commit('setCaseData', arr)
     }
   }
 })

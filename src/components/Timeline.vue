@@ -105,7 +105,7 @@ export default {
 
         .title {
           width: 100%;
-          font-size: 120%;
+          font-size: 110%;
           font-weight: bold;
           text-align: left;
         }
