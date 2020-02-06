@@ -32,6 +32,9 @@ export default {
         title: {
           text: '全国疫情地图',
           subtext: '',
+          textStyle: {
+            fontSize: 14
+          },
           x: 'left'
         },
         tooltip: {

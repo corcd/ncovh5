@@ -28,9 +28,10 @@ export default {
 
 <style lang="scss">
 #app {
-  width: 100%;
-  height: 100%;
-  background: url('./assets/images/health.png') no-repeat fixed;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  background: url('./assets/images/health.png') no-repeat;
   background-size: cover;
   font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'PingFang SC',
     'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
