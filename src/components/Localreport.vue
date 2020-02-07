@@ -1,13 +1,13 @@
 <template>
   <div class="report">
     <div class="item">
-      <div class="item-province item-province-title">地区</div>
+      <div class="item-name item-name-title">地区</div>
       <div class="item-confirmed item-confirmed-title">确诊</div>
       <div class="item-dead item-dead-title">死亡</div>
       <div class="item-cured item-cured-title">治愈</div>
     </div>
-    <div class="item" v-for="(item, index) in getCase" :key="index">
-      <div class="item-province">{{ item.provinceShortName }}</div>
+    <div class="item" v-for="(item, index) in info" :key="index">
+      <div class="item-name">{{ item.name }}</div>
       <div class="item-confirmed">{{ item.confirmedCount }}</div>
       <div class="item-dead">{{ item.deadCount }}</div>
       <div class="item-cured">{{ item.curedCount }}</div>
@@ -16,16 +16,10 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
   name: 'Report',
-  computed: {
-    ...mapState(['case']),
-    getCase() {
-      const arr = this.case ? this.case : []
-      return arr
-    }
+  props: {
+    info: { type: Array, default: () => [] }
   }
 }
 </script>
@@ -49,7 +43,7 @@ export default {
       border-bottom: 1px solid #e9e9e9;
     }
 
-    .item-province-title {
+    .item-name-title {
       background: #e4e7f2;
     }
 
@@ -65,7 +59,7 @@ export default {
       background: #80c99d;
     }
 
-    .item-province {
+    .item-name {
       width: 40%;
       padding: 0 0 0 6%;
       text-align: left;

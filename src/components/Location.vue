@@ -1,7 +1,11 @@
 <template>
   <div class="location">
     <div class="introduction">
-      <span class="info-time">截至 {{ date }} 数据统计</span>
+      <div class="info-location">
+        <van-tag class="tag" type="danger">本地</van-tag>
+        绍兴
+      </div>
+      <span class="info-time">截至 {{ getTime }} 地区卫健委统计</span>
     </div>
     <div class="info-count">
       <Count
@@ -13,65 +17,95 @@
         :color="item.color"
       ></Count>
     </div>
-    <Report :caseinfo="caseInfo"></Report>
+    <Localreport :info="caseInfo"></Localreport>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import dayjs from 'dayjs'
 import Count from '@/components/Count'
-import Report from '@/components/Report'
+import Localreport from '@/components/Localreport'
 
 export default {
   name: 'Location',
-  components: { Count, Report },
+  components: { Count, Localreport },
   data() {
+    const countInfo = [
+      {
+        title: '确诊',
+        count: 34,
+        incr: 0,
+        color: '#f74c31'
+      },
+      {
+        title: '死亡',
+        count: 0,
+        incr: 0,
+        color: '#5d7092'
+      },
+      {
+        title: '治愈',
+        count: 3,
+        incr: 1,
+        color: '#28b7a3'
+      }
+    ]
+
+    const caseInfo = [
+      {
+        name: '越城区',
+        confirmedCount: 13,
+        deadCount: 0,
+        curedCount: 2
+      },
+      {
+        name: '柯桥区',
+        confirmedCount: 7,
+        deadCount: 0,
+        curedCount: 0
+      },
+      {
+        name: '诸暨市',
+        confirmedCount: 5,
+        deadCount: 0,
+        curedCount: 0
+      },
+      {
+        name: '上虞区',
+        confirmedCount: 2,
+        deadCount: 0,
+        curedCount: 1
+      },
+      {
+        name: '新昌县',
+        confirmedCount: 2,
+        deadCount: 0,
+        curedCount: 0
+      },
+      {
+        name: '嵊州市',
+        confirmedCount: 1,
+        deadCount: 0,
+        curedCount: 0
+      },
+      {
+        name: '未公布来源',
+        confirmedCount: 4,
+        deadCount: 0,
+        curedCount: 0
+      }
+    ]
+
     return {
-      date: '',
-      images: [],
-      countInfo: () => {},
-      caseInfo: []
+      countInfo: countInfo,
+      caseInfo: caseInfo
     }
   },
-  created() {
-    this.getNcovInfo()
-  },
-  methods: {
-    async getNcovInfo() {
-      const data = {
-        key: '115d31d6719afd73bcaad096fac0cb2b'
-      }
-      const res = await this.$api.tianapi.ncov(data)
-      const newsList = res.data.newslist[0]
-      this.date = dayjs(newsList.desc.modifyTime).format('YYYY-MM-DD HH:mm:ss')
-      this.images = [...newsList.desc.dailyPics]
-      this.countInfo = [
-        {
-          title: '确诊',
-          count: newsList.desc.confirmedCount,
-          incr: newsList.desc.confirmedIncr,
-          color: '#f74c31'
-        },
-        {
-          title: '疑似',
-          count: newsList.desc.suspectedCount,
-          incr: newsList.desc.suspectedIncr,
-          color: '#f78207'
-        },
-        {
-          title: '死亡',
-          count: newsList.desc.deadCount,
-          incr: newsList.desc.deadIncr,
-          color: '#5d7092'
-        },
-        {
-          title: '治愈',
-          count: newsList.desc.curedCount,
-          incr: newsList.desc.curedIncr,
-          color: '#28b7a3'
-        }
-      ]
-      this.caseInfo = [...newsList.case].reverse()
+  computed: {
+    ...mapState(['desc', 'case']),
+    getTime() {
+      return dayjs(this.desc.modifyTime).format('YYYY-MM-DD HH:mm:ss')
     }
   }
 }
@@ -80,7 +114,7 @@ export default {
 <style lang="scss" scoped>
 .location {
   width: 100%;
-  min-height: 800px;
+  min-height: 600px;
   padding: 2% 3.5%;
   background: #fff;
 
@@ -90,8 +124,15 @@ export default {
     justify-content: space-between;
     align-items: center;
 
-    .info-time {
+    .info-location {
       font-size: 40%;
+      font-weight: bold;
+    }
+
+    .info-time {
+      flex-grow: 1;
+      font-size: 40%;
+      text-align: right;
     }
   }
 

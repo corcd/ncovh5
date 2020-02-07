@@ -48,7 +48,7 @@ export default {
 <style lang="scss" scoped>
 .timeline {
   width: 100%;
-  min-height: 800px;
+  min-height: 600px;
   padding: 2% 3.5%;
   background: #f7f7f7;
 

@@ -1,0 +1,55 @@
+{
+  "code": 200,
+  "errorCode": 0,
+  "errorMessage": "",
+  "data": {
+    "list": [
+      {
+        "articleId": 36024,
+        "createTime": 1580787897,
+        "title": "【今日永嘉】疫情防控 众志成城",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/f90e2274d1aaf335f8dce6c3c24120cd.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/piclive?id=1267&uin=2768",
+        "url": "https://web.guangdianyun.tv/piclive?id=1267&uin=2768",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36023,
+        "createTime": 1580787688,
+        "title": "【智慧长沙】抗击疫情 长沙在行动",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/a161ab91b72fa7601e180e0eb2cb00fb.jpeg",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36832?uin=1648",
+        "url": "https://web.guangdianyun.tv/live/36832?uin=1648",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36022,
+        "createTime": 1580786788,
+        "title": "【常德】津市在行动滚动疫情直播",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/a210917e3511d8ca29ca36d2c5489e99.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/piclive?id=1281&uin=2269",
+        "url": "https://web.guangdianyun.tv/piclive?id=1281&uin=2269",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36021,
+        "createTime": 1580785048,
+        "title": "【十堰晚报】人民战“疫”！——“武汉时间”特别直播节目",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/baa7cafd8b77546177f46730668c50d6.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36780?uin=1318&from=timeline",
+        "url": "https://web.guangdianyun.tv/live/36780?uin=1318&from=timeline",
+        "commentCount": 0
+      }
+    ],
+    "count": 54,
+    "type": "column"
+  }
+}

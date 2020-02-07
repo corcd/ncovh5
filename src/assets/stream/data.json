@@ -20,8 +20,9 @@
       {
         "cityName": "十堰市",
         "mediaName": "十堰日报",
-        "streamUrl": "https://web.guangdianyun.tv/live/36780?uin=1318",
-        "streamPoster": ""
+        "title": "主播带你打探: 茅箭区全区休市歇业 生活物资咋配送?",
+        "streamUrl": "https://web.guangdianyun.tv/live/36950?uin=1318",
+        "streamPoster": "http://static-pro.guangdianyun.tv/2139/cms/20200204/a2de98a67239df7aa711c25cec8c7eed.png"
       }, {
         "cityName": "襄阳市南漳县",
         "mediaName": "南漳县融媒体中心",
@@ -102,8 +103,9 @@
       {
         "cityName": "长沙市",
         "mediaName": "智慧长沙",
-        "streamUrl": "https://web.guangdianyun.tv/live/36971?uin=1648",
-        "streamPoster": ""
+        "title": "新型肺炎心理讲堂开课啦！权威专家帮您解惑",
+        "streamUrl": "https://web.guangdianyun.tv/live/37002?uin=1648",
+        "streamPoster": "http://static-pro.guangdianyun.tv/2139/cms/20200206/670ed5d586d4c85a1bd39951bdb72267.png"
       }
     ]
   },
@@ -133,8 +135,9 @@
     "children": [{
       "cityName": "南通市如皋市",
       "mediaName": "如皋市融媒体中心",
-      "streamUrl": "http://live.erugao.cn/live/36925?uin=1545",
-      "streamPoster": ""
+      "title": "“抗击疫情我们在行动“直播特别节目",
+      "streamUrl": "https://live.erugao.cn/live/36798?uin=1545",
+      "streamPoster": "http://static-pro.guangdianyun.tv/2139/cms/20200206/967ade5485ab72b7b1bca8a1768e4242.png"
     }]
   },
   {

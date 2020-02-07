@@ -84,7 +84,7 @@ export default {
 <style lang="scss" scoped>
 .infomation {
   width: 100%;
-  min-height: 800px;
+  min-height: 600px;
   padding: 2% 3.5%;
   background: #fff;
 
@@ -96,6 +96,7 @@ export default {
 
     .info-time {
       font-size: 40%;
+      text-align: left;
     }
   }
 
