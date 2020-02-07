@@ -46,8 +46,8 @@ export default {
       },
       {
         title: '治愈',
-        count: 3,
-        incr: 1,
+        count: 5,
+        incr: 2,
         color: '#28b7a3'
       }
     ]
@@ -93,7 +93,7 @@ export default {
         name: '未公布来源',
         confirmedCount: 4,
         deadCount: 0,
-        curedCount: 0
+        curedCount: 2
       }
     ]
 
