@@ -14,7 +14,7 @@ Vue.use(Notify)
 // 创建 axios 实例
 const Request = axios.create({
   headers: {
-    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+    'Content-Type': 'application/json; charset=UTF-8'
   },
   timeout: 3000
 })
