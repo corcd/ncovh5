@@ -10,7 +10,7 @@ const tianapi = {
     })
   },
   case(data) {
-    return Request.get(`http://api.tianapi.com/txapi/ncovcity/index`, {
+    return Request.get(`https://api.tianapi.com/txapi/ncovcity/index`, {
       data
     })
   }
