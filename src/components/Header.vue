@@ -1,10 +1,10 @@
 <template>
   <div class="header">
-    <div class="custom-count">
+    <!-- <div class="custom-count">
       <span id="busuanzi_container_site_pv">
         <span id="busuanzi_value_site_pv">0</span>人次已浏览
       </span>
-    </div>
+    </div> -->
   </div>
 </template>
 

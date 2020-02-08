@@ -3,9 +3,9 @@
     <div class="introduction">
       <div class="info-location">
         <van-tag class="tag" type="danger">本地</van-tag>
-        绍兴
+        {{ region ? region : '未公开' }}
       </div>
-      <span class="info-time">截至 {{ getTime }} 地区卫健委统计</span>
+      <span class="info-time">截至 {{ updateTime }} 地区媒体公布</span>
     </div>
     <div class="info-count">
       <Count
@@ -17,7 +17,7 @@
         :color="item.color"
       ></Count>
     </div>
-    <Localreport :info="caseInfo"></Localreport>
+    <!-- <Localreport :info="caseInfo"></Localreport> -->
   </div>
 </template>
 
@@ -25,32 +25,32 @@
 import { mapState } from 'vuex'
 import dayjs from 'dayjs'
 import Count from '@/components/Count'
-import Localreport from '@/components/Localreport'
+// import Localreport from '@/components/Localreport'
 
 export default {
   name: 'Location',
-  components: { Count, Localreport },
+  components: { Count },
   data() {
-    const countInfo = [
-      {
-        title: '确诊',
-        count: 34,
-        incr: 0,
-        color: '#f74c31'
-      },
-      {
-        title: '死亡',
-        count: 0,
-        incr: 0,
-        color: '#5d7092'
-      },
-      {
-        title: '治愈',
-        count: 5,
-        incr: 2,
-        color: '#28b7a3'
-      }
-    ]
+    // const countInfo = [
+    //   {
+    //     title: '确诊',
+    //     count: 34,
+    //     incr: 0,
+    //     color: '#f74c31'
+    //   },
+    //   {
+    //     title: '死亡',
+    //     count: 0,
+    //     incr: 0,
+    //     color: '#5d7092'
+    //   },
+    //   {
+    //     title: '治愈',
+    //     count: 5,
+    //     incr: 2,
+    //     color: '#28b7a3'
+    //   }
+    // ]
 
     const caseInfo = [
       {
@@ -98,14 +98,51 @@ export default {
     ]
 
     return {
-      countInfo: countInfo,
+      region: '',
+      updateTime: '',
+      countInfo: [],
       caseInfo: caseInfo
     }
+  },
+  mounted() {
+    this.getClientData()
   },
   computed: {
     ...mapState(['desc', 'case']),
     getTime() {
       return dayjs(this.desc.modifyTime).format('YYYY-MM-DD HH:mm:ss')
+    }
+  },
+  methods: {
+    async getClientData() {
+      const uin = this.$utils.parseUrl('uin')
+      const data = {
+        uin: uin
+      }
+      const res = await this.$api.client.ncovData(data)
+      const date = res.data.data.updateAt ? res.data.data.updateAt : 0
+      this.region = res.data.area
+      this.updateTime = dayjs(date * 1000).format('YYYY-MM-DD HH:mm:ss')
+      this.countInfo = [
+        {
+          title: '确诊',
+          count: res.data.data.confirmedCount,
+          incr: res.data.data.confirmedCountInc,
+          color: '#f74c31'
+        },
+        {
+          title: '死亡',
+          count: res.data.data.deadCount,
+          incr: res.data.data.deadCountInc,
+          color: '#5d7092'
+        },
+        {
+          title: '治愈',
+          count: res.data.data.curedCount,
+          incr: res.data.data.curedCountInc,
+          color: '#28b7a3'
+        }
+      ]
     }
   }
 }
@@ -140,7 +177,7 @@ export default {
     width: 100%;
     height: 20%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 2% 0;
   }

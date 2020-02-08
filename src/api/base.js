@@ -5,7 +5,7 @@
  */
 
 const base = {
-  gateWay: '//consoleapi.guangdianyun.tv'
+  gateWay: '//consoleapi.guangdianyun.tv/ncov'
 }
 
 export default base

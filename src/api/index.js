@@ -5,8 +5,10 @@
  */
 import business from '@/api/business'
 import tianapi from '@/api/tianapi'
+import client from '@/api/client'
 
 export default {
   business,
-  tianapi
+  tianapi,
+  client
 }
