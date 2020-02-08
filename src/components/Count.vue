@@ -2,7 +2,7 @@
   <div class="count">
     <span class="title">{{ title }}</span>
     <span class="count" :style="{ color: color }">{{ count }}</span>
-    <span class="incr">
+    <span class="incr" v-if="showinc">
       较昨日
       <span class="incr-count" :style="{ color: color }">+{{ incr }}</span>
     </span>
@@ -28,6 +28,10 @@ export default {
     color: {
       type: String,
       default: '#f74c31'
+    },
+    showinc: {
+      type: Boolean,
+      default: true
     }
   }
 }

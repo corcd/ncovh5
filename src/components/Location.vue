@@ -15,6 +15,7 @@
         :count="item.count"
         :incr="item.incr"
         :color="item.color"
+        :showinc="item.showinc"
       ></Count>
     </div>
     <!-- <Localreport :info="caseInfo"></Localreport> -->
@@ -121,26 +122,29 @@ export default {
       }
       const res = await this.$api.client.ncovData(data)
       const date = res.data.data.updateAt ? res.data.data.updateAt : 0
-      this.region = res.data.area
+      this.region = res.data.data.area
       this.updateTime = dayjs(date * 1000).format('YYYY-MM-DD HH:mm:ss')
       this.countInfo = [
         {
           title: '确诊',
           count: res.data.data.confirmedCount,
           incr: res.data.data.confirmedCountInc,
-          color: '#f74c31'
+          color: '#f74c31',
+          showinc: false
         },
         {
           title: '死亡',
           count: res.data.data.deadCount,
           incr: res.data.data.deadCountInc,
-          color: '#5d7092'
+          color: '#5d7092',
+          showinc: false
         },
         {
           title: '治愈',
           count: res.data.data.curedCount,
           incr: res.data.data.curedCountInc,
-          color: '#28b7a3'
+          color: '#28b7a3',
+          showinc: false
         }
       ]
     }
