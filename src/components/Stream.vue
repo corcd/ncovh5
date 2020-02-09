@@ -1,29 +1,54 @@
 <template>
   <div class="stream">
     <div class="introduction">
-      <span class="info-content">以下直播均收集至“广电云”平台</span>
+      <span class="info-content">以下直播均收集自互联网</span>
     </div>
     <div class="streamlist">
       <div class="area">
-        <div class="area-province area-province-title">省、市、区县及地区</div>
+        <div class="area-province area-province-title">平台</div>
         <div class="area-count area-count-title">相关直播</div>
       </div>
-      <div class="area" v-for="(item, index) in data" :key="index">
-        <div class="area-province">{{ item.provinceShortName }}</div>
-        <div class="area-count">{{ item.children.length }}</div>
+      <div class="area">
+        <div class="area-province">广电云</div>
+        <div class="area-count">{{ part.length }}</div>
       </div>
+    </div>
+    <div class="live">
+      <Liveitem
+        v-for="(item, index) in part"
+        :key="index"
+        :title="item.title"
+        :poster="item.coverImg"
+        :date="item.createTime"
+        :url="item.url"
+      ></Liveitem>
     </div>
   </div>
 </template>
 
 <script>
+import Liveitem from '@/components/Liveitem'
 const DATA = require('@/assets/stream/data.json')
+const PART1 = require('@/assets/stream/part1_1.json')
+const PART2 = require('@/assets/stream/part1_2.json')
+const PART3 = require('@/assets/stream/part1_3.json')
+const PART4 = require('@/assets/stream/part1_4.json')
+const PART5 = require('@/assets/stream/part1_5.json')
+const PART6 = require('@/assets/stream/part1_6.json')
 
 export default {
   name: 'Stream',
+  components: { Liveitem },
   data() {
     return {
-      data: DATA
+      data: DATA,
+      part: PART1.data.list.concat(
+        PART2.data.list,
+        PART3.data.list,
+        PART4.data.list,
+        PART5.data.list,
+        PART6.data.list
+      )
     }
   }
 }
@@ -88,6 +113,15 @@ export default {
         border-right: 1px solid #fff;
       }
     }
+  }
+
+  .live {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2% 0;
   }
 }
 </style>

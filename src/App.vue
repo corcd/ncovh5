@@ -6,21 +6,31 @@
 
 <script>
 import { mapActions } from 'vuex'
-
 export default {
   created() {
     this.getNcovInfo()
   },
   methods: {
-    ...mapActions(['setGlobalData', 'setCaseData']),
+    ...mapActions(['setGlobalData', 'setCaseData', 'setGdyData']),
     async getNcovInfo() {
+      this.$toast.loading({
+        message: '加载中...',
+        forbidClick: true
+      })
       const data = {
         key: '115d31d6719afd73bcaad096fac0cb2b'
       }
       const ncovRes = await this.$api.tianapi.ncov(data)
       const caseRes = await this.$api.tianapi.case(data)
+      const uin = this.$utils.parseUrl('uin')
+      const gdyData = {
+        uin: uin
+      }
+      const gdyRes = await this.$api.client.ncovData(gdyData)
+      this.setGdyData(gdyRes.data.data)
       this.setGlobalData(ncovRes.data.newslist[0])
       this.setCaseData(caseRes.data.newslist)
+      this.$toast.clear()
     }
   }
 }
@@ -28,11 +38,9 @@ export default {
 
 <style lang="scss">
 #app {
-  width: 100vw;
-  max-width: 100vw;
-  height: 100vh;
-  background: url('./assets/images/health.png') no-repeat;
-  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
   font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'PingFang SC',
     'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';

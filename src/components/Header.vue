@@ -5,12 +5,20 @@
         <span id="busuanzi_value_site_pv">0</span>人次已浏览
       </span>
     </div> -->
+    <div class="desc">
+      {{ gdy.desc }}
+    </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  name: 'Header'
+  name: 'Header',
+  computed: {
+    ...mapState(['gdy'])
+  }
 }
 </script>
 
@@ -19,21 +27,23 @@ export default {
   position: relative;
   width: 100%;
   height: 0;
-  padding-top: 70%;
+  padding-top: 65%;
   color: #fff;
   font-size: 100%;
   text-align: center;
-  background: transparent;
+  background: url('../assets/images/health.png') no-repeat;
+  background-size: cover;
 
   .custom-count {
     position: absolute;
-    top: 18%;
+    top: 15%;
     right: 0;
-    height: 10%;
+    min-width: 160px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 4% 0 4%;
+    padding: 0 0 0 5px;
     color: #fff;
     font-size: 80%;
     line-height: 100%;
@@ -44,6 +54,21 @@ export default {
     #busuanzi_container_site_pv {
       display: block !important;
     }
+  }
+
+  .desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 20%;
+    padding-left: 6.2%;
+    color: #fff;
+    font-size: 90%;
+    font-weight: bold;
+    line-height: 110%;
+    text-align: left;
+    vertical-align: middle;
   }
 }
 </style>

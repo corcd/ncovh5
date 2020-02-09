@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import utils from './utils'
 import api from './api'
+import VueLazyload from 'vue-lazyload'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 import NProgress from 'nprogress' // 进度条
@@ -11,6 +12,7 @@ import 'nprogress/nprogress.css' // 进度条样式
 
 import '@/assets/styles/global.scss'
 
+Vue.use(VueLazyload)
 Vue.use(Vant)
 
 Vue.config.productionTip = false

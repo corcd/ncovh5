@@ -1,15 +1,15 @@
 <template>
   <div class="tabs">
-    <van-tabs v-model="active" class="vantabs" animated swipeable sticky>
+    <van-tabs v-model="active" class="vantabs" swipeable sticky>
       <van-tab title="疫情总览">
         <Information></Information>
       </van-tab>
       <van-tab title="本地疫情">
         <Location></Location>
       </van-tab>
-      <!-- <van-tab title="相关直播">
+      <van-tab title="相关直播">
         <Stream></Stream>
-      </van-tab> -->
+      </van-tab>
       <van-tab title="实时播报">
         <Timeline></Timeline>
       </van-tab>
@@ -22,14 +22,14 @@
 
 <script>
 import Information from '@/components/Information'
-// import Stream from '@/components/Stream'
+import Stream from '@/components/Stream'
 import Location from '@/components/Location'
 import Timeline from '@/components/Timeline'
 // import Tools from '@/components/Tools'
 
 export default {
   name: 'Tabs',
-  components: { Information, Location, Timeline },
+  components: { Information, Stream, Location, Timeline },
   data() {
     return {
       active: 0

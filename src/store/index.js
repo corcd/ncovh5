@@ -7,23 +7,30 @@ export default new Vuex.Store({
   state: {
     news: [],
     case: [],
-    desc: {}
+    desc: {},
+    gdy: {}
   },
   mutations: {
-    setGlobalData(state, obj) {
+    SET_GLOBAL(state, obj) {
       state.news = obj.news
       state.desc = obj.desc
     },
-    setCaseData(state, arr) {
+    SET_CASE(state, arr) {
       state.case = arr
+    },
+    SET_GDY(state, obj) {
+      state.gdy = obj
     }
   },
   actions: {
     setGlobalData(context, obj) {
-      context.commit('setGlobalData', obj)
+      context.commit('SET_GLOBAL', obj)
     },
     setCaseData(context, arr) {
-      context.commit('setCaseData', arr)
+      context.commit('SET_CASE', arr)
+    },
+    setGdyData(context, obj) {
+      context.commit('SET_GDY', obj)
     }
   }
 })
