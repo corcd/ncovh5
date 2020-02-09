@@ -19,7 +19,7 @@ export default {
   position: relative;
   width: 100%;
   height: 0;
-  padding-top: 70%;
+  padding-top: 65%;
   color: #fff;
   font-size: 100%;
   text-align: center;
@@ -27,13 +27,14 @@ export default {
 
   .custom-count {
     position: absolute;
-    top: 18%;
+    top: 15%;
     right: 0;
-    height: 10%;
+    min-width: 160px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 4% 0 4%;
+    padding: 0 0 0 5px;
     color: #fff;
     font-size: 80%;
     line-height: 100%;

@@ -14,6 +14,10 @@ export default {
   methods: {
     ...mapActions(['setGlobalData', 'setCaseData']),
     async getNcovInfo() {
+      this.$toast.loading({
+        message: '加载中...',
+        forbidClick: true
+      })
       const data = {
         key: '115d31d6719afd73bcaad096fac0cb2b'
       }
@@ -21,6 +25,7 @@ export default {
       const caseRes = await this.$api.tianapi.case(data)
       this.setGlobalData(ncovRes.data.newslist[0])
       this.setCaseData(caseRes.data.newslist)
+      this.$toast.clear()
     }
   }
 }
@@ -28,9 +33,9 @@ export default {
 
 <style lang="scss">
 #app {
-  width: 100vw;
-  max-width: 100vw;
-  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
   background: url('./assets/images/health.png') no-repeat;
   background-size: cover;
   font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'PingFang SC',

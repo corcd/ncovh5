@@ -1,6 +1,6 @@
 <template>
   <div class="tabs">
-    <van-tabs v-model="active" class="vantabs" animated swipeable sticky>
+    <van-tabs v-model="active" class="vantabs" swipeable sticky>
       <van-tab title="疫情总览">
         <Information></Information>
       </van-tab>

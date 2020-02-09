@@ -18,6 +18,28 @@
       ></Count>
     </div>
     <Localreport :info="caseInfo"></Localreport>
+    <div class="btn-group">
+      <van-button
+        type="info"
+        size="small"
+        plain
+        round
+        block
+        @click="community()"
+      >
+        新冠小区查询
+      </van-button>
+      <van-button
+        type="info"
+        size="small"
+        plain
+        round
+        block
+        @click="distribution()"
+      >
+        病例分布查询
+      </van-button>
+    </div>
   </div>
 </template>
 
@@ -34,7 +56,7 @@ export default {
     const countInfo = [
       {
         title: '确诊',
-        count: 34,
+        count: 36,
         incr: 0,
         color: '#f74c31'
       },
@@ -91,7 +113,7 @@ export default {
       },
       {
         name: '未公布来源',
-        confirmedCount: 4,
+        confirmedCount: 6,
         deadCount: 0,
         curedCount: 2
       }
@@ -106,6 +128,14 @@ export default {
     ...mapState(['desc', 'case']),
     getTime() {
       return dayjs(this.desc.modifyTime).format('YYYY-MM-DD HH:mm:ss')
+    }
+  },
+  methods: {
+    community() {
+      window.location.href = 'https://ncov.html5.qq.com/community?channelid=17'
+    },
+    distribution() {
+      this.$toast('功能开发中，即将上线...')
     }
   }
 }
@@ -143,6 +173,20 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 2% 0;
+  }
+
+  .btn-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0;
+
+    button {
+      width: 48%;
+      height: 40px;
+      font-size: 100%;
+      font-weight: bold;
+    }
   }
 }
 </style>

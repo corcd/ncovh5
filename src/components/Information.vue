@@ -1,7 +1,9 @@
 <template>
   <div class="infomation">
     <div class="introduction">
-      <span class="info-time">截至 {{ getTime }} 全国数据统计</span>
+      <span class="info-time">
+        截至 {{ getTime }} 全国数据统计 ---- 李文亮医生千古
+      </span>
     </div>
     <div class="info-count">
       <Count

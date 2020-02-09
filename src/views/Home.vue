@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Header></Header>
+    <Header class="header"></Header>
     <Tabs class="tabs"></Tabs>
   </div>
 </template>
@@ -29,10 +29,14 @@ export default {
   margin: 0;
   padding: 0;
 
+  .header {
+    flex-shrink: 0;
+  }
+
   .tabs {
     flex-grow: 1;
     width: 100%;
-    height: 100%;
+    height: 75%;
   }
 }
 </style>

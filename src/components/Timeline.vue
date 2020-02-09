@@ -58,7 +58,7 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 4%;
+    margin-bottom: 20px;
     background: transparent;
 
     .news-dot {
@@ -66,7 +66,7 @@ export default {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      margin-bottom: 2%;
+      margin-bottom: 5px;
 
       .dot {
         width: 14px;
