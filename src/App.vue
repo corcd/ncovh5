@@ -18,6 +18,7 @@ export default {
         message: '加载中...',
         forbidClick: true
       })
+      // 天行数据接口配置
       const data = {
         key: '115d31d6719afd73bcaad096fac0cb2b'
       }
@@ -36,8 +37,6 @@ export default {
   width: 100%;
   max-width: 100%;
   height: 100%;
-  background: url('./assets/images/health.png') no-repeat;
-  background-size: cover;
   font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'PingFang SC',
     'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';

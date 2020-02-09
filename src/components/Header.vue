@@ -5,6 +5,9 @@
         <span id="busuanzi_value_site_pv">0</span>人次已浏览
       </span>
     </div>
+    <div class="desc">
+      {{ '新冠肺炎媒体信息实时追踪同步平台' }}
+    </div>
   </div>
 </template>
 
@@ -23,14 +26,15 @@ export default {
   color: #fff;
   font-size: 100%;
   text-align: center;
-  background: transparent;
+  background: url('../assets/images/health.png') no-repeat;
+  background-size: cover;
 
   .custom-count {
     position: absolute;
     top: 15%;
     right: 0;
     min-width: 160px;
-    height: 35px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,6 +49,21 @@ export default {
     #busuanzi_container_site_pv {
       display: block !important;
     }
+  }
+
+  .desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 20%;
+    padding-left: 6.2%;
+    color: #fff;
+    font-size: 90%;
+    font-weight: bold;
+    line-height: 110%;
+    text-align: left;
+    vertical-align: middle;
   }
 }
 </style>

@@ -57,7 +57,7 @@ export default {
       {
         title: '确诊',
         count: 36,
-        incr: 0,
+        incr: 2,
         color: '#f74c31'
       },
       {
@@ -69,7 +69,7 @@ export default {
       {
         title: '治愈',
         count: 5,
-        incr: 2,
+        incr: 0,
         color: '#28b7a3'
       }
     ]
@@ -170,7 +170,7 @@ export default {
     width: 100%;
     height: 20%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 2% 0;
   }

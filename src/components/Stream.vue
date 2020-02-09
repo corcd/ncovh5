@@ -1,16 +1,16 @@
 <template>
   <div class="stream">
     <div class="introduction">
-      <span class="info-content">以下直播均收集至“广电云”平台</span>
+      <span class="info-content">以下直播均收集互联网</span>
     </div>
     <div class="streamlist">
       <div class="area">
-        <div class="area-province area-province-title">省、市、区县及地区</div>
+        <div class="area-province area-province-title">平台</div>
         <div class="area-count area-count-title">相关直播</div>
       </div>
-      <div class="area" v-for="(item, index) in data" :key="index">
-        <div class="area-province">{{ item.provinceShortName }}</div>
-        <div class="area-count">{{ item.children.length }}</div>
+      <div class="area">
+        <div class="area-province">广电云</div>
+        <div class="area-count">{{ part.length }}</div>
       </div>
       <div class="live">
         <Liveitem

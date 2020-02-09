@@ -56,7 +56,7 @@ export default {
   height: 80px;
   display: flex;
   justify-content: space-between;
-  margin: 1% 0;
+  margin: 5px 0;
   background: #fff;
   border: 2px solid #f2f2f2;
   border-radius: 3px;
