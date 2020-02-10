@@ -7,9 +7,9 @@
       <van-tab title="本地疫情">
         <Location></Location>
       </van-tab>
-      <van-tab title="相关直播">
+      <!-- <van-tab title="相关直播">
         <Stream></Stream>
-      </van-tab>
+      </van-tab> -->
       <van-tab title="实时播报">
         <Timeline></Timeline>
       </van-tab>
@@ -22,14 +22,14 @@
 
 <script>
 import Information from '@/components/Information'
-import Stream from '@/components/Stream'
+// import Stream from '@/components/Stream'
 import Location from '@/components/Location'
 import Timeline from '@/components/Timeline'
 // import Tools from '@/components/Tools'
 
 export default {
   name: 'Tabs',
-  components: { Information, Stream, Location, Timeline },
+  components: { Information, Location, Timeline },
   data() {
     return {
       active: 0

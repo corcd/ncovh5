@@ -8,7 +8,8 @@ export default new Vuex.Store({
     news: [],
     case: [],
     desc: {},
-    gdy: {}
+    gdy: {},
+    live: []
   },
   mutations: {
     SET_GLOBAL(state, obj) {
@@ -20,6 +21,9 @@ export default new Vuex.Store({
     },
     SET_GDY(state, obj) {
       state.gdy = obj
+    },
+    SET_LIVE(state, arr) {
+      state.live = arr
     }
   },
   actions: {
@@ -31,6 +35,9 @@ export default new Vuex.Store({
     },
     setGdyData(context, obj) {
       context.commit('SET_GDY', obj)
+    },
+    getLiveData(context, arr) {
+      context.commit('SET_LIVE', arr)
     }
   }
 })

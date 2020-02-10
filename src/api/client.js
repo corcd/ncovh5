@@ -11,8 +11,13 @@ const client = {
       data
     })
   },
+  liveList(data) {
+    return Request.get(`${base.gateWay}/c/live/list`, {
+      data
+    })
+  },
   cmsList(data) {
-    return Request.get(`${base.gateWay}/c/list`, {
+    return Request.get(`${base.gateWay}/c/cms/list`, {
       data
     })
   }

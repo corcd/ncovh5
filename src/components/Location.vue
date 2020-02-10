@@ -41,6 +41,19 @@
         病例分布查询
       </van-button>
     </div>
+    <div class="live">
+      <div class="title">相关媒体直播</div>
+      <div class="list">
+        <Liveitem
+          v-for="(item, index) in liveList"
+          :key="index"
+          :title="item.title"
+          :poster="item.cover"
+          :date="item.createTime"
+          :url="item.url"
+        ></Liveitem>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -48,11 +61,20 @@
 import { mapState } from 'vuex'
 import dayjs from 'dayjs'
 import Count from '@/components/Count'
+import Liveitem from '@/components/Liveitem'
 // import Localreport from '@/components/Localreport'
 
 export default {
   name: 'Location',
-  components: { Count },
+  components: { Count, Liveitem },
+  data() {
+    return {
+      liveList: []
+    }
+  },
+  mounted() {
+    this.getLiveList()
+  },
   computed: {
     ...mapState(['desc', 'case', 'gdy']),
     getTime() {
@@ -85,6 +107,16 @@ export default {
     }
   },
   methods: {
+    async getLiveList() {
+      const uin = this.$utils.parseUrl('uin')
+      const data = {
+        uin: uin,
+        page: 1,
+        num: 100
+      }
+      const res = await this.$api.client.liveList(data)
+      this.liveList = [...res.data.data.list]
+    },
     community() {
       window.location.href = 'https://ncov.html5.qq.com/community?channelid=17'
     },
@@ -140,6 +172,25 @@ export default {
       height: 40px;
       font-size: 100%;
       font-weight: bold;
+    }
+  }
+
+  .live {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .title {
+      width: 100%;
+      font-size: 90%;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .list {
+      width: 100%;
     }
   }
 }
