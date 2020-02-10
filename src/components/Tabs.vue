@@ -7,6 +7,9 @@
       <van-tab title="本地疫情">
         <Location></Location>
       </van-tab>
+      <van-tab title="谣言终结">
+        <Rumour></Rumour>
+      </van-tab>
       <van-tab title="相关直播">
         <Stream></Stream>
       </van-tab>
@@ -24,12 +27,13 @@
 import Information from '@/components/Information'
 import Stream from '@/components/Stream'
 import Location from '@/components/Location'
+import Rumour from '@/components/Rumour'
 import Timeline from '@/components/Timeline'
 // import Tools from '@/components/Tools'
 
 export default {
   name: 'Tabs',
-  components: { Information, Stream, Location, Timeline },
+  components: { Information, Rumour, Stream, Location, Timeline },
   data() {
     return {
       active: 0
