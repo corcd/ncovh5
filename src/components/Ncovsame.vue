@@ -109,7 +109,7 @@ export default {
       this.resList = this.data.slice(0, 99)
     },
     search() {
-      console.log(dayjs(this.date).unix(), this.type, this.no)
+      // console.log(dayjs(this.date).unix(), this.type, this.no)
       this.intro = '搜索结果'
       let res = []
       this.data.forEach(item => {
