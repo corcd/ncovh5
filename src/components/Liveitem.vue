@@ -78,14 +78,15 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 1%;
+    padding: 2px 5px 2px 10px;
 
     .title {
       width: 100%;
       height: 80%;
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      font-size: 90%;
+      color: #333;
+      font-size: 100%;
       font-weight: bold;
       text-align: left;
       -webkit-line-clamp: 2;

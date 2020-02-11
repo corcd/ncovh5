@@ -62,6 +62,12 @@ export default {
     left: 0;
     width: 40%;
     height: 20%;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     padding-left: 6.2%;
     color: #fff;
     font-size: 90%;
