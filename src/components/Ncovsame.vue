@@ -57,8 +57,9 @@
 <script>
 import dayjs from 'dayjs'
 import DetailList from '@/components/DetailList'
+
 export default {
-  name: 'Newncovsame',
+  name: 'Ncovsame',
   components: {
     DetailList
   },
