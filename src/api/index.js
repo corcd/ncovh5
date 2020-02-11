@@ -7,10 +7,12 @@ import business from '@/api/business'
 import tianapi from '@/api/tianapi'
 import client from '@/api/client'
 import dxy from '@/api/dxy'
+import nosugartech from '@/api/nosugartech'
 
 export default {
   business,
   tianapi,
   client,
-  dxy
+  dxy,
+  nosugartech
 }

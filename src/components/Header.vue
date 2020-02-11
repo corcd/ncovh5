@@ -61,6 +61,7 @@ export default {
     bottom: 0;
     left: 0;
     width: 40%;
+    min-width: 180px;
     height: 20%;
     display: -webkit-box;
     overflow: hidden;
