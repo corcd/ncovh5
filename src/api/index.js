@@ -6,9 +6,11 @@
 import business from '@/api/business'
 import tianapi from '@/api/tianapi'
 import dxy from '@/api/dxy'
+import nosugartech from '@/api/nosugartech'
 
 export default {
   business,
   tianapi,
-  dxy
+  dxy,
+  nosugartech
 }

@@ -11,7 +11,7 @@
         <Rumour></Rumour>
       </van-tab>
       <van-tab title="同程查询">
-        <Ncovsame></Ncovsame>
+        <Newncovsame></Newncovsame>
       </van-tab>
       <van-tab title="相关直播">
         <Stream></Stream>
@@ -31,13 +31,13 @@ import Information from '@/components/Information'
 import Stream from '@/components/Stream'
 import Location from '@/components/Location'
 import Rumour from '@/components/Rumour'
-import Ncovsame from '@/components/Ncovsame'
+import Newncovsame from '@/components/Newncovsame'
 import Timeline from '@/components/Timeline'
 // import Tools from '@/components/Tools'
 
 export default {
   name: 'Tabs',
-  components: { Information, Rumour, Stream, Ncovsame, Location, Timeline },
+  components: { Information, Rumour, Stream, Newncovsame, Location, Timeline },
   data() {
     return {
       active: 0

@@ -6,17 +6,18 @@
       <div class="title-item item-no">航班/车次/场所</div>
       <div class="title-item item-pos">地区</div>
     </div>
+    <div v-if="data.length === 0" class="empty">暂无搜索结果</div>
     <div class="item" v-for="(item, index) in data" :key="index">
       <div class="item-date" style="color:#CC413A">
-        {{ getTime(item.date) }}
+        {{ getTime(item.t_date) }}
       </div>
-      <div class="item-type">{{ item.type }}</div>
-      <div class="item-no">{{ item.no }}</div>
-      <div v-if="item.pos_start && item.pos_end" class="item-pos">
-        {{ `${item.pos_start}-${item.pos_end}` }}
+      <div class="item-type">{{ getType(item.t_type) }}</div>
+      <div class="item-no">{{ item.t_no }}</div>
+      <div v-if="item.t_pos_start && item.t_pos_end" class="item-pos">
+        {{ `${item.t_pos_start}-${item.t_pos_end}` }}
       </div>
       <div v-else class="item-pos">
-        {{ item.pos_start }}
+        {{ item.t_pos_start ? item.t_pos_start : '/' }}
       </div>
     </div>
   </div>
@@ -33,7 +34,26 @@ export default {
       default: () => []
     }
   },
+  data() {
+    return {
+      columns: [
+        '飞机 ',
+        '火车',
+        '地铁',
+        '大巴',
+        '公交车',
+        '网约车',
+        '轮船',
+        '场所'
+      ]
+    }
+  },
   computed: {
+    getType() {
+      return type => {
+        return this.columns[type - 1]
+      }
+    },
     getTime() {
       return date => {
         return dayjs(date).format('M月DD日')
@@ -47,6 +67,13 @@ export default {
 .detaillist {
   width: 100%;
   padding: 2% 0;
+
+  .empty {
+    width: 100%;
+    padding: 5px;
+    font-size: 80%;
+    font-weight: normal;
+  }
 
   .item {
     width: 100%;
@@ -90,7 +117,7 @@ export default {
     }
 
     .item-no {
-      width: 50%;
+      width: 45%;
       padding: 5px;
       font-size: 80%;
       font-weight: normal;
@@ -99,7 +126,7 @@ export default {
     }
 
     .item-pos {
-      width: 20%;
+      width: 25%;
       padding: 5px;
       font-size: 80%;
       font-weight: normal;
