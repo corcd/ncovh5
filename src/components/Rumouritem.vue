@@ -1,6 +1,13 @@
 <template>
   <div class="backbox">
-    <canvas class="my-canvas" ref="myCanvas" width="320" height="625"></canvas>
+    <canvas
+      class="my-canvas"
+      ref="myCanvas"
+      width="320"
+      height="625"
+      v-show="false"
+    ></canvas>
+    <img :src="imgURL" alt="" />
   </div>
 </template>
 
@@ -8,53 +15,51 @@
 export default {
   data() {
     return {
-      context: {}
+      drawing: {},
+      context: {},
+      imgURL: ''
     }
   },
   methods: {
-    drawText(text, x, y, maxWidth, lineHeight) {
-      if (
-        typeof text != 'string' ||
-        typeof x != 'number' ||
-        typeof y != 'number'
-      ) {
-        return
-      }
-      let canvas = this.context.canvas
-
-      if (typeof maxWidth == 'undefined') {
-        maxWidth = (canvas && canvas.width) || 300
-      }
-
-      // NaN
-      if (typeof lineHeight == 'undefined') {
-        lineHeight =
-          (canvas && parseInt(window.getComputedStyle(canvas).lineHeight)) ||
-          parseInt(window.getComputedStyle(document.body).lineHeight)
-      }
-
+    drawTextLine(text, x, y, spacing) {
+      const lineText = text.split('')
+      const metrics = this.context.measureText(lineText[0])
+      const width = metrics.width + spacing
+      lineText.forEach((item, index) => {
+        this.context.fillText(item, x + width * index, y)
+      })
+    },
+    drawText(
+      text = '',
+      x = 0,
+      y = 0,
+      maxWidth = 30,
+      lineHeight = 16,
+      letterSpacing = 2
+    ) {
       // 字符分隔为数组
-      let arrText = text.split('')
+      const arrText = text.split('')
       let line = ''
 
       for (let n = 0; n < arrText.length; n++) {
         let testLine = line + arrText[n]
-        let metrics = this.context.measureText(testLine)
-        let testWidth = metrics.width
+        const metrics = this.context.measureText(testLine)
+        let testWidth = metrics.width + letterSpacing * (testLine.length - 1)
         if (testWidth > maxWidth && n > 0) {
-          this.context.fillText(line, x, y)
+          this.drawTextLine(line, x, y, letterSpacing)
           line = arrText[n]
           y += lineHeight
         } else {
           line = testLine
         }
       }
-      this.context.fillText(line, x, y)
+      this.drawTextLine(line, x, y, letterSpacing)
+      return y
     },
     drawlImage() {
-      let drawing = this.$refs.myCanvas
-      if (drawing.getContext) {
-        this.context = drawing.getContext('2d')
+      this.drawing = this.$refs.myCanvas
+      if (this.drawing.getContext) {
+        this.context = this.drawing.getContext('2d')
         this.context.strokeStyle = '#0000ff'
 
         // 绘制矩形
@@ -69,28 +74,33 @@ export default {
         const text1 = '谣言'
         const text2 = '深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?'
         const text3 = '辟谣'
-        const text4 = '深呼吸再深呼，吸再深呼吸再深呼，吸再深呼.吸再深呼?'
+        const text4 = '深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?'
         const text5 =
-          '深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?'
+          '深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?深呼吸再深呼，吸再深呼吸再深呼，吸再深呼。吸再深呼?深呼吸再深呼'
         this.context.fillStyle = '#fff'
         this.context.font = 'bolder 50px arial'
-        this.drawText(text1, 15, 98, 286, 50)
-        this.context.font = 'bold 22px sans-serif'
-        this.drawText(text2, 20, 140, 286, 22)
+        this.drawText(text1, 15, 98, 286, 50, 0)
+        this.context.font = 'bold 22px 微软雅黑'
+        this.drawText(text2, 20, 140, 286, 22, 0)
         this.context.fillStyle = '#333'
         this.context.font = 'bolder 50px arial'
-        this.drawText(text3, 15, 304, 238, 50)
+        this.drawText(text3, 15, 304, 238, 50, 0)
         this.context.fillStyle = '#000'
-        this.context.font = 'bold 16px sans-serif'
-        this.drawText(text4, 20, 336, 238, 18)
+        this.context.font = 'bold 16px 微软雅黑'
+        const pos_y = this.drawText(text4, 20, 336, 238, 18, 1)
         this.context.fillStyle = '#6a6a6a'
-        this.context.font = '14px sans-serif'
-        this.drawText(text5, 20, 378, 238, 18)
+        this.context.font = '14px 微软雅黑'
+        this.drawText(text5, 20, pos_y + 26, 238, 18, 2)
       }
+    },
+    createImgURL() {
+      const type = 'png'
+      this.imgURL = this.drawing.toDataURL(type)
     }
   },
   mounted() {
     this.drawlImage()
+    this.createImgURL()
   }
 }
 </script>
