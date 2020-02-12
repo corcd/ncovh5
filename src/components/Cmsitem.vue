@@ -97,9 +97,9 @@ export default {
       display: -webkit-box;
       -webkit-box-orient: vertical;
       color: #333;
-      font-size: 120%;
+      font-size: 100%;
       font-weight: 400;
-      line-height: 140%;
+      line-height: 120%;
       text-align: left;
       -webkit-line-clamp: 2;
       text-overflow: ellipsis;
@@ -114,7 +114,7 @@ export default {
       justify-content: space-between;
       align-items: flex-start;
       color: #999;
-      font-size: 90%;
+      font-size: 80%;
 
       .author {
         width: 50%;
