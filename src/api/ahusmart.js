@@ -4,7 +4,7 @@ const ahusmart = {
   /*
    * 病例分布数据相关
    */
-  ahusmart(data) {
+  getData(data) {
     return Request.get(`https://lab.ahusmart.com/nCoV/api/detail`, {
       data
     })

@@ -13,6 +13,9 @@
       <van-tab title="同程查询">
         <Newncovsame></Newncovsame>
       </van-tab>
+      <van-tab title="病例分布">
+        <Community></Community>
+      </van-tab>
       <van-tab title="相关直播">
         <Stream></Stream>
       </van-tab>
@@ -32,12 +35,21 @@ import Stream from '@/components/Stream'
 import Location from '@/components/Location'
 import Rumour from '@/components/Rumour'
 import Newncovsame from '@/components/Newncovsame'
+import Community from '@/components/Community'
 import Timeline from '@/components/Timeline'
 // import Tools from '@/components/Tools'
 
 export default {
   name: 'Tabs',
-  components: { Information, Rumour, Stream, Newncovsame, Location, Timeline },
+  components: {
+    Information,
+    Rumour,
+    Stream,
+    Newncovsame,
+    Community,
+    Location,
+    Timeline
+  },
   data() {
     return {
       active: 0
