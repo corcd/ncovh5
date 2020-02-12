@@ -1,7 +1,7 @@
 <template>
   <div class="liveitem" @click="link()">
     <div class="left">
-      <van-image width="142" radius="3" fit="fill" :src="poster" lazy-load>
+      <van-image width="178" radius="3" fit="fill" :src="poster" lazy-load>
         <template v-slot:loading>
           <van-loading type="spinner" size="20" />
         </template>
@@ -10,7 +10,10 @@
     </div>
     <div class="right">
       <div class="title">{{ title }}</div>
-      <div class="date">{{ getTime }}</div>
+      <div class="info">
+        <div class="author">{{ type === 'news' ? getAuthor : '' }}</div>
+        <div class="date">{{ getTime }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -35,11 +38,22 @@ export default {
     url: {
       type: String,
       default: ''
+    },
+    author: {
+      type: String,
+      default: ''
+    },
+    type: {
+      type: String,
+      default: 'live'
     }
   },
   computed: {
     getTime() {
-      return dayjs(this.date * 1000).format('YYYY-MM-DD HH:mm:ss')
+      return dayjs(this.date * 1000).format('YYYY-MM-DD')
+    },
+    getAuthor() {
+      return this.author ? this.author : '佚名'
     }
   },
   methods: {
@@ -53,12 +67,12 @@ export default {
 <style lang="scss" scoped>
 .liveitem {
   width: 100%;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   margin: 5px 0;
   background: #fff;
-  border: 2px solid #f2f2f2;
+  border: 1px solid #ebebeb;
   border-radius: 3px;
   // box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
 
@@ -78,16 +92,17 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 2px 5px 2px 10px;
+    padding: 10px 5px 10px 10px;
 
     .title {
       width: 100%;
-      height: 80%;
+      height: 75%;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       color: #333;
-      font-size: 100%;
+      font-size: 120%;
       font-weight: bold;
+      line-height: 120%;
       text-align: left;
       -webkit-line-clamp: 2;
       text-overflow: ellipsis;
@@ -95,12 +110,32 @@ export default {
       overflow: hidden;
     }
 
-    .date {
+    .info {
       width: 100%;
-      height: 20%;
+      height: 25%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       color: #999;
-      font-size: 80%;
-      text-align: right;
+      font-size: 90%;
+
+      .author {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        // text-align: left;
+      }
+
+      .date {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        // text-align: right;
+      }
     }
   }
 }

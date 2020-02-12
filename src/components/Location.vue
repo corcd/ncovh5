@@ -2,8 +2,9 @@
   <div class="location">
     <div class="introduction">
       <div class="info-location">
-        <van-tag class="tag" type="danger">本地</van-tag>
-        {{ gdy.area ? gdy.area : '未公开' }}
+        <van-tag class="tag" type="danger">
+          本地·{{ gdy.area ? gdy.area : '未公开' }}
+        </van-tag>
       </div>
       <span class="info-time">截至 {{ getTime }} 地方媒体公布</span>
     </div>
@@ -54,6 +55,21 @@
         ></Liveitem>
       </div>
     </div>
+    <div class="cms">
+      <div class="title">本地相关资讯</div>
+      <div class="list">
+        <Liveitem
+          v-for="(item, index) in cmsList"
+          :key="index"
+          :title="item.title"
+          :poster="item.cover"
+          :date="item.createTime"
+          :url="item.url"
+          :author="item.author"
+          type="news"
+        ></Liveitem>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -69,11 +85,13 @@ export default {
   components: { Count, Liveitem },
   data() {
     return {
-      liveList: []
+      liveList: [],
+      cmsList: []
     }
   },
   mounted() {
     this.getLiveList()
+    this.getCmsList()
   },
   computed: {
     ...mapState(['desc', 'case', 'gdy']),
@@ -117,6 +135,16 @@ export default {
       const res = await this.$api.client.liveList(data)
       this.liveList = [...res.data.data.list]
     },
+    async getCmsList() {
+      const uin = this.$utils.parseUrl('uin')
+      const data = {
+        uin: uin,
+        page: 1,
+        num: 100
+      }
+      const res = await this.$api.client.cmsList(data)
+      this.cmsList = [...res.data.data.list]
+    },
     community() {
       window.location.href = 'https://ncov.html5.qq.com/community?channelid=17'
     },
@@ -140,14 +168,9 @@ export default {
     justify-content: space-between;
     align-items: center;
 
-    .info-location {
-      font-size: 40%;
-      font-weight: bold;
-    }
-
     .info-time {
       flex-grow: 1;
-      font-size: 40%;
+      font-size: 70%;
       text-align: right;
     }
   }
@@ -185,7 +208,27 @@ export default {
 
     .title {
       width: 100%;
-      font-size: 90%;
+      font-size: 100%;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .list {
+      width: 100%;
+    }
+  }
+
+  .cms {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2% 0;
+
+    .title {
+      width: 100%;
+      font-size: 100%;
       font-weight: bold;
       text-align: left;
     }

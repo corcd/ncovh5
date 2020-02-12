@@ -95,7 +95,7 @@ export default {
     align-items: center;
 
     .info-time {
-      font-size: 40%;
+      font-size: 70%;
       text-align: left;
     }
   }

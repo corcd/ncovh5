@@ -47,7 +47,7 @@ export default {
 
   .title {
     width: 100%;
-    font-size: 80%;
+    font-size: 100%;
     color: #000;
     font-weight: bold;
   }
@@ -55,7 +55,7 @@ export default {
   .count {
     width: 100%;
     padding: 4% 0;
-    font-size: 120%;
+    font-size: 140%;
     font-weight: bold;
   }
 
