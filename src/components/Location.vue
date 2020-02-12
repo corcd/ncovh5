@@ -58,7 +58,7 @@
     <div class="cms">
       <div class="title">本地相关资讯</div>
       <div class="list">
-        <Liveitem
+        <Cmsitem
           v-for="(item, index) in cmsList"
           :key="index"
           :title="item.title"
@@ -67,7 +67,7 @@
           :url="item.url"
           :author="item.author"
           type="news"
-        ></Liveitem>
+        ></Cmsitem>
       </div>
     </div>
   </div>
@@ -78,11 +78,12 @@ import { mapState } from 'vuex'
 import dayjs from 'dayjs'
 import Count from '@/components/Count'
 import Liveitem from '@/components/Liveitem'
+import Cmsitem from '@/components/Cmsitem'
 // import Localreport from '@/components/Localreport'
 
 export default {
   name: 'Location',
-  components: { Count, Liveitem },
+  components: { Count, Liveitem, Cmsitem },
   data() {
     return {
       liveList: [],
@@ -149,7 +150,7 @@ export default {
       window.location.href = 'https://ncov.html5.qq.com/community?channelid=17'
     },
     distribution() {
-      this.$toast('功能开发中，即将上线...')
+      this.$toast('功能已上线，详情见‘病例分布’选项卡')
     }
   }
 }
@@ -159,19 +160,24 @@ export default {
 .location {
   width: 100%;
   min-height: 600px;
-  padding: 2% 3.5%;
-  background: #fff;
+  background: #f7f7f7;
 
   .introduction {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2% 3.5%;
+    background: #fff;
 
     .info-time {
       flex-grow: 1;
+      height: 22px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
       font-size: 70%;
-      text-align: right;
+      // text-align: right;
     }
   }
 
@@ -181,14 +187,16 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2% 0;
+    padding: 2% 3.5%;
+    background: #fff;
   }
 
   .btn-group {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 2% 0;
+    padding: 2% 3.5%;
+    background: #fff;
 
     button {
       width: 48%;
@@ -204,7 +212,9 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 2% 0;
+    margin: 2% 0;
+    padding: 2% 3.5%;
+    background: #fff;
 
     .title {
       width: 100%;
@@ -224,7 +234,9 @@ export default {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 2% 0;
+    margin: 2% 0;
+    padding: 2% 3.5%;
+    background: #fff;
 
     .title {
       width: 100%;
