@@ -97,7 +97,7 @@ export default {
       display: -webkit-box;
       -webkit-box-orient: vertical;
       color: #333;
-      font-size: 100%;
+      font-size: 110%;
       font-weight: 400;
       line-height: 120%;
       text-align: left;
