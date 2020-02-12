@@ -3,7 +3,7 @@
     <div class="left">
       <div class="title">{{ title }}</div>
       <div class="info">
-        <div class="author">{{ type === 'news' ? getAuthor : '' }}</div>
+        <div class="author">{{ getAuthor }}</div>
         <div class="date">{{ getTime }}</div>
       </div>
     </div>
@@ -42,10 +42,6 @@ export default {
     author: {
       type: String,
       default: ''
-    },
-    type: {
-      type: String,
-      default: 'live'
     }
   },
   computed: {

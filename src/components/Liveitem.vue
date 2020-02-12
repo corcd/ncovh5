@@ -14,7 +14,6 @@
     <div class="right">
       <div class="title">{{ title }}</div>
       <div class="info">
-        <div class="author">{{ type === 'news' ? getAuthor : '' }}</div>
         <div class="date">{{ getTime }}</div>
       </div>
     </div>
@@ -154,17 +153,8 @@ export default {
       color: #999;
       font-size: 90%;
 
-      .author {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        // text-align: left;
-      }
-
       .date {
-        width: 50%;
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: flex-end;
