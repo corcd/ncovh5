@@ -98,7 +98,7 @@ export default {
       z-index: 3;
 
       .triangle {
-        margin-left: 6px;
+        margin-left: 5px;
         margin-bottom: -1px;
         float: left;
         width: 0;
