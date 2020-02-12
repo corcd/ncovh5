@@ -4,6 +4,7 @@
       <div class="desc">新型冠状病毒肺炎</div>
       <div class="name">谣言终结榜</div>
     </div>
+    <Roumeritem></Roumeritem>
     <div class="content">
       <div class="card" v-for="(item, index) in rumourList" :key="index">
         <div class="type">
@@ -37,8 +38,12 @@
 </template>
 
 <script>
+import Roumeritem from '@/components/Rumouritem'
 export default {
   name: 'Rumour',
+  components: {
+    Roumeritem
+  },
   data() {
     return {
       rumourList: []
