@@ -1,0 +1,121 @@
+{
+  "code": 200,
+  "errorCode": 0,
+  "errorMessage": "",
+  "data": {
+    "list": [
+      {
+        "articleId": 36047,
+        "createTime": 1580801733,
+        "title": "【哈尔滨】“防控疫情 我们在一起”哈广电融媒体直播",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/4254f18e3952282485be2168a03678dd.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36859?uin=1831&scene=1&clicktime=1580720191&enterid=1580720191&from=timeline&isappinstalled=0",
+        "url": "https://web.guangdianyun.tv/live/36859?uin=1831&scene=1&clicktime=1580720191&enterid=1580720191&from=timeline&isappinstalled=0",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36044,
+        "createTime": 1580798106,
+        "title": "【智慧长沙】慢直播｜湖南省红十字会捐赠物资转运全记录",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/65e9e0ca8fea21e8b9c6062d1f9b77d1.jpeg",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36940?uin=1648",
+        "url": "https://web.guangdianyun.tv/live/36940?uin=1648",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36032,
+        "createTime": 1580790186,
+        "title": "【余杭FM1021电台】众志成城防控疫情直播进行时",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/f93d6ad956ff54d6ea7ef6a00c88c818.png",
+        "articleType": 3,
+        "redirectLink": "https://tv.yhtv.com.cn/live/36936?uin=1024&from=timeline",
+        "url": "https://tv.yhtv.com.cn/live/36936?uin=1024&from=timeline",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36030,
+        "createTime": 1580788818,
+        "title": "【大庆台】《坚决打赢疫情防控阻击战——共同战“疫”面对面》全媒体直播",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/8ca9c1a795ec6d1f042de2cb46454369.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36847?uin=1652",
+        "url": "https://web.guangdianyun.tv/live/36847?uin=1652",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36031,
+        "createTime": 1580789163,
+        "title": "【太原教育台】太原名师空中课堂",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/cff65cefdcc2d9d0f0a8a4b13bc15221.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36811?uin=1928&from=timeline&isappinstalled=0",
+        "url": "https://web.guangdianyun.tv/live/36811?uin=1928&from=timeline&isappinstalled=0",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36029,
+        "createTime": 1580788676,
+        "title": "【叮咚FM】济南春节市场和防疫物资供应及保障情况",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/104a7d8fd06e4eaa4ab78d1be95e9e88.png",
+        "articleType": 3,
+        "redirectLink": "https://gdy.dingdongfm.cn/live/36784?uin=1032",
+        "url": "https://gdy.dingdongfm.cn/live/36784?uin=1032",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36028,
+        "createTime": 1580788514,
+        "title": "【鞍山电视台】周宏宇谈新冠肺炎疫情防控",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/87cb3d435670c29fd695eaf3059dd59e.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36753?uin=2476",
+        "url": "https://web.guangdianyun.tv/live/36753?uin=2476",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36027,
+        "createTime": 1580788355,
+        "title": "【云上襄阳】众志成城抗疫情特别直播",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/c09861323321230ffa7069dda8789111.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36767?uin=1500",
+        "url": "https://web.guangdianyun.tv/live/36767?uin=1500",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36026,
+        "createTime": 1580788137,
+        "title": "【兰精灵】防控疫情兰溪在行动",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/dc6e93803e88c2bd98659d1d566746aa.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/piclive?id=1275&uin=1324",
+        "url": "https://web.guangdianyun.tv/piclive?id=1275&uin=1324",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36025,
+        "createTime": 1580788041,
+        "title": "【长兴传媒】疫情信息滚动直播",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/50effce1ac0162dd511d03757d18f62d.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36750?uin=1799",
+        "url": "https://web.guangdianyun.tv/live/36750?uin=1799",
+        "commentCount": 0
+      }
+    ],
+    "count": 54,
+    "type": "column"
+  }
+}

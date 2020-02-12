@@ -1,0 +1,121 @@
+{
+  "code": 200,
+  "errorCode": 0,
+  "errorMessage": "",
+  "data": {
+    "list": [
+      {
+        "articleId": 36100,
+        "createTime": 1580818449,
+        "title": "【平潭】直播 | 平潭全力防控新型冠状病毒，我们在行动",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/b6a417b2f4aa23989557b4d1d4c06bf0.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36766?uin=1118",
+        "url": "https://web.guangdianyun.tv/live/36766?uin=1118",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36099,
+        "createTime": 1580818128,
+        "title": "【长沙】湘雅医院：医护人员严阵以待，坚守疫情防控一线",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/52352dc923f6ce39f68c5f07f1023a9a.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36746?uin=1648",
+        "url": "https://web.guangdianyun.tv/live/36746?uin=1648",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36098,
+        "createTime": 1580818050,
+        "title": "【大庆】面对新型冠状病毒感染的肺炎 我们要怎么做",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/31db87cea134376ac92a80c0572051ab.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36743?uin=1463",
+        "url": "https://web.guangdianyun.tv/live/36743?uin=1463",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36097,
+        "createTime": 1580817980,
+        "title": "【佳木斯】面对疫情不能掉以轻心 防控疫情也不能漫不经心",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/3a8ab734246c65ca6147d0818a3182f2.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36741?uin=1900",
+        "url": "https://web.guangdianyun.tv/live/36741?uin=1900",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36096,
+        "createTime": 1580816926,
+        "title": "【南漳融媒体】南漳县新型冠状病毒感染的肺炎防控指挥部新闻通气会",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/1d3082497499677194e08978782cc148.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36809?uin=1577",
+        "url": "https://web.guangdianyun.tv/live/36809?uin=1577",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36095,
+        "createTime": 1580816765,
+        "title": "【宁波晚报】浙江省新型冠状病毒感染的肺炎疫情防控工作新闻发布会",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/08eab521ff580745d28568f7e673f93f.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36763?uin=1791",
+        "url": "https://web.guangdianyun.tv/live/36763?uin=1791",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36094,
+        "createTime": 1580816680,
+        "title": "【今日永嘉】滚动播报 疫情防控",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/36d90b1891385e0b467efca82d7b6f7e.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/piclive?id=1267&uin=2768",
+        "url": "https://web.guangdianyun.tv/piclive?id=1267&uin=2768",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36093,
+        "createTime": 1580816542,
+        "title": "【爱桐乡】防控疫情 桐乡在行动",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/395f10eab6bbfce940a77c4acce84f85.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/piclive?id=1274&uin=1043",
+        "url": "https://web.guangdianyun.tv/piclive?id=1274&uin=1043",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36092,
+        "createTime": 1580816423,
+        "title": "【莘县】国家卫健委副主任李斌介绍肺炎疫情联防联控情况",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/cb58863a1fbd1dacc2995b12e791f00f.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36756?uin=2286",
+        "url": "https://web.guangdianyun.tv/live/36756?uin=2286",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36091,
+        "createTime": 1580816294,
+        "title": "【山东】山东首例新型肺炎确诊患者治愈出院",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/e5601d572fbf0e5b913ee1444dd1a28c.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36808?uin=2516",
+        "url": "https://web.guangdianyun.tv/live/36808?uin=2516",
+        "commentCount": 0
+      }
+    ],
+    "count": 54,
+    "type": "column"
+  }
+}

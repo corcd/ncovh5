@@ -1,0 +1,121 @@
+{
+  "code": 200,
+  "errorCode": 0,
+  "errorMessage": "",
+  "data": {
+    "list": [
+      {
+        "articleId": 36196,
+        "createTime": 1580976815,
+        "title": "【十堰晚报】人民战“疫”！——“武汉时间”特别直播节目",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200206/486344bd5435607cb174516d9e0e7413.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36780?uin=1318%3Fisapp%3Dtrue",
+        "url": "https://web.guangdianyun.tv/live/36780?uin=1318%3Fisapp%3Dtrue",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36195,
+        "createTime": 1580976762,
+        "title": "【泉州晚报】24小时直播｜直击武汉疫情防控",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200206/06bd5bf1902da59052e8710043a0db44.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/37020?uin=1521",
+        "url": "https://web.guangdianyun.tv/live/37020?uin=1521",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36165,
+        "createTime": 1580969127,
+        "title": "【如皋】“抗击疫情我们在行动'直播特别节目",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200206/967ade5485ab72b7b1bca8a1768e4242.png",
+        "articleType": 3,
+        "redirectLink": "https://live.erugao.cn/live/36798?uin=1545",
+        "url": "https://live.erugao.cn/live/36798?uin=1545",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36163,
+        "createTime": 1580967545,
+        "title": "【南通】首批两名新型冠状病毒感染的肺炎病人治愈出院",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200206/55c760a2161b877b5af1d40cfbfd4453.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36996?uin=1602&from=singlemessage&isappinstalled=0",
+        "url": "https://web.guangdianyun.tv/live/36996?uin=1602&from=singlemessage&isappinstalled=0",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36164,
+        "createTime": 1580967594,
+        "title": "【巴中】走\"镜\"战疫前线 记者带你走进巴中车站",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200206/13676ae1bac316e60b9edbcd676478f8.png",
+        "articleType": 3,
+        "redirectLink": "https://live.bzgd.com/live/36958?uin=1091",
+        "url": "https://live.bzgd.com/live/36958?uin=1091",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36161,
+        "createTime": 1580966729,
+        "title": "【张家口】全民战“疫”, 张家口在行动 ——走进桥东东方苑社区",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200206/bbdf1e8fe73c53781d27ab2a0af58ec6.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36999?uin=1573&from=timeline&isappinstalled=0",
+        "url": "https://web.guangdianyun.tv/live/36999?uin=1573&from=timeline&isappinstalled=0",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36160,
+        "createTime": 1580966051,
+        "title": "【长沙】新型肺炎心理讲堂开课啦！权威专家帮您解惑",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200206/670ed5d586d4c85a1bd39951bdb72267.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/37002?uin=1648",
+        "url": "https://web.guangdianyun.tv/live/37002?uin=1648",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36158,
+        "createTime": 1580965741,
+        "title": "【浏直播】高新区“金丰林”今日正式复工！",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200206/700fc0aaa6d4506f597fb9be156d1a44.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36998?uin=1556&from=timeline&isappinstalled=0",
+        "url": "https://web.guangdianyun.tv/live/36998?uin=1556&from=timeline&isappinstalled=0",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36159,
+        "createTime": 1580965839,
+        "title": "战疫直播间：长沙火车南站疫情防控实况",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200206/200a8400a702274db2e8eba3a94f239f.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/37008?uin=1648",
+        "url": "https://web.guangdianyun.tv/live/37008?uin=1648",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36147,
+        "createTime": 1580896704,
+        "title": "【浏阳融媒体中心】见证“惠科金杨”今日复工！",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200205/206f0d1cf83c948cbbe00cb0a5128790.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36983?uin=1556&from=timeline&isappinstalled=0",
+        "url": "https://web.guangdianyun.tv/live/36983?uin=1556&from=timeline&isappinstalled=0",
+        "commentCount": 0
+      }
+    ],
+    "count": 54,
+    "type": "column"
+  }
+}

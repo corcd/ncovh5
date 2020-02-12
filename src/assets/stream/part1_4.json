@@ -1,0 +1,121 @@
+{
+  "code": 200,
+  "errorCode": 0,
+  "errorMessage": "",
+  "data": {
+    "list": [
+      {
+        "articleId": 36090,
+        "createTime": 1580816218,
+        "title": "【栖霞】阻击“疫情”我们快行动！",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/bae5d1c450e4ffc1f8f02a87d638baa9.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36181?uin=3004",
+        "url": "https://web.guangdianyun.tv/live/36181?uin=3004",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36089,
+        "createTime": 1580815999,
+        "title": "【大庆】专访“大庆市新型肺炎疫情防控工作领导小组专家组成员”",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/1da6a22e92e1ce96e1ae8e5ee474f191.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36699?uin=1463",
+        "url": "https://web.guangdianyun.tv/live/36699?uin=1463",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36088,
+        "createTime": 1580815843,
+        "title": "【山西】众志成城战疫情",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/70d86d0567ed69639a22aa35b1b865a1.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/14054?uin=1889",
+        "url": "https://web.guangdianyun.tv/live/14054?uin=1889",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36087,
+        "createTime": 1580815646,
+        "title": "【夏邑】《抗击疫情 众志成城》大型特别直播节目",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/8a121a38a8b0b61c713113d968f80130.jpeg",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36767?uin=1500",
+        "url": "https://web.guangdianyun.tv/live/36767?uin=1500",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36086,
+        "createTime": 1580812308,
+        "title": "【石家庄】《坚决打赢疫情防控阻击战—共同战“疫”面对面》",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/6fb605a8f5a881ed4f76449575554d37.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36847?uin=1652",
+        "url": "https://web.guangdianyun.tv/live/36847?uin=1652",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36085,
+        "createTime": 1580811916,
+        "title": "【山西】防疫直播：“科学识“疫” 积极防“疫”",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/c52b9b8200de1408061b417804fe7480.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36944?uin=1888",
+        "url": "https://web.guangdianyun.tv/live/36944?uin=1888",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36084,
+        "createTime": 1580811782,
+        "title": "【普洱台】云南省第二批援助湖北医疗队出征仪式",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/a2f68fb8ef42a812b7b13c3ad6477436.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36946?uin=1670",
+        "url": "https://web.guangdianyun.tv/live/36946?uin=1670",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36083,
+        "createTime": 1580811657,
+        "title": "【邵阳新闻网】邵阳在行动 疫情防控动态播报",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/6055f08417cde112a5a834480a89193c.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/piclive?id=1272&uin=1261",
+        "url": "https://web.guangdianyun.tv/piclive?id=1272&uin=1261",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36082,
+        "createTime": 1580809731,
+        "title": "【青海】格尔木市疫情防控处置工作新闻发布会",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/a4dac049d3e73a140a3c86ade324e660.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36905?uin=2642",
+        "url": "https://web.guangdianyun.tv/live/36905?uin=2642",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36079,
+        "createTime": 1580804420,
+        "title": "【邹平融媒体中心】“战肺炎”坚决打赢防控新型肺炎阻击战",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/bc6ab6d51c964f962331b178cfd393fb.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/piclive?id=1270&uin=1933&from=timeline",
+        "url": "https://web.guangdianyun.tv/piclive?id=1270&uin=1933&from=timeline",
+        "commentCount": 0
+      }
+    ],
+    "count": 54,
+    "type": "column"
+  }
+}

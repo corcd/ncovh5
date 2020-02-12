@@ -1,25 +1,22 @@
 <template>
-  <div class="home">
-    <Header class="header"></Header>
-    <Tabs class="tabs"></Tabs>
+  <div class="journey">
+    <div class="header"></div>
+    <div class="content">
+      <div class="query"></div>
+      <div class="result"></div>
+    </div>
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header'
-import Tabs from '@/components/Tabs'
-
 export default {
-  name: 'home',
-  components: {
-    Header,
-    Tabs
-  }
+  name: 'Journey',
+  components: {}
 }
 </script>
 
 <style lang="scss" scoped>
-.home {
+.journey {
   width: 100%;
   height: 100%;
   display: flex;

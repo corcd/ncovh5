@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import api from './api'
+import VueLazyload from 'vue-lazyload'
+import BaiduMap from 'vue-baidu-map'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 import NProgress from 'nprogress' // 进度条
@@ -10,6 +12,10 @@ import 'nprogress/nprogress.css' // 进度条样式
 
 import '@/assets/styles/global.scss'
 
+Vue.use(BaiduMap, {
+  ak: 'D9QLGbiVX0KWTr6l547DImIw4kPUwTQd'
+})
+Vue.use(VueLazyload)
 Vue.use(Vant)
 
 Vue.config.productionTip = false

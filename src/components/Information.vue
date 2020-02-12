@@ -1,71 +1,78 @@
 <template>
   <div class="infomation">
     <div class="introduction">
-      <span class="info-time">截至 2020-02-04 09:39 全国数据统计</span>
+      <span class="info-time">截至 {{ getTime }} 全国数据统计</span>
     </div>
     <div class="info-count">
       <Count
-        v-for="item in countInfo"
-        :key="item.title"
+        v-for="(item, index) in getCount"
+        :key="index"
         :title="item.title"
         :count="item.count"
         :incr="item.incr"
         :color="item.color"
       ></Count>
     </div>
+    <Map></Map>
+    <van-swipe class="info-images" :autoplay="5000">
+      <van-swipe-item v-for="(image, index) in desc.dailyPics" :key="index">
+        <van-image fit="contain" :src="image">
+          <template v-slot:loading>
+            <van-loading type="spinner" size="20" />
+          </template>
+          <template v-slot:error>加载失败</template>
+        </van-image>
+      </van-swipe-item>
+    </van-swipe>
+    <Report></Report>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import dayjs from 'dayjs'
 import Count from '@/components/Count'
+import Map from '@/components/Map'
+import Report from '@/components/Report'
 
 export default {
   name: 'Information',
-  components: { Count },
-  data() {
-    return {
-      countInfo: () => {}
-    }
-  },
-  mounted() {
-    this.getNcovInfo()
-  },
-  methods: {
-    async getNcovInfo() {
-      const data = {
-        key: '115d31d6719afd73bcaad096fac0cb2b'
-      }
-      const res = await this.$api.tianapi.ncov(data)
-      const newsList = res.data.newslist[0]
-      this.countInfo = [
+  components: { Count, Map, Report },
+  computed: {
+    ...mapState(['desc', 'case']),
+    getTime() {
+      return dayjs(this.desc.modifyTime).format('YYYY-MM-DD HH:mm:ss')
+    },
+    getCount() {
+      return [
         {
           title: '确诊',
-          count: newsList.desc.confirmedCount,
-          incr: newsList.desc.confirmedIncr,
+          count: this.desc.confirmedCount,
+          incr: this.desc.confirmedIncr,
           color: '#f74c31'
         },
         {
           title: '疑似',
-          count: newsList.desc.suspectedCount,
-          incr: newsList.desc.suspectedIncr,
+          count: this.desc.suspectedCount,
+          incr: this.desc.suspectedIncr,
           color: '#f78207'
         },
         {
           title: '危重',
-          count: newsList.desc.seriousCount,
-          incr: newsList.desc.seriousIncr,
+          count: this.desc.seriousCount,
+          incr: this.desc.seriousIncr,
           color: '#a25a4e'
         },
         {
           title: '死亡',
-          count: newsList.desc.deadCount,
-          incr: newsList.desc.deadIncr,
+          count: this.desc.deadCount,
+          incr: this.desc.deadIncr,
           color: '#5d7092'
         },
         {
           title: '治愈',
-          count: newsList.desc.curedCount,
-          incr: newsList.desc.curedIncr,
+          count: this.desc.curedCount,
+          incr: this.desc.curedIncr,
           color: '#28b7a3'
         }
       ]
@@ -77,7 +84,7 @@ export default {
 <style lang="scss" scoped>
 .infomation {
   width: 100%;
-  min-height: 800px;
+  min-height: 600px;
   padding: 2% 3.5%;
   background: #fff;
 
@@ -89,6 +96,7 @@ export default {
 
     .info-time {
       font-size: 40%;
+      text-align: left;
     }
   }
 
@@ -99,6 +107,11 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 2% 0;
+  }
+
+  .info-images {
+    width: 100%;
+    padding: 4% 0;
   }
 }
 </style>

@@ -1,0 +1,121 @@
+{
+  "code": 200,
+  "errorCode": 0,
+  "errorMessage": "",
+  "data": {
+    "list": [
+      {
+        "articleId": 36146,
+        "createTime": 1580891862,
+        "title": "【长沙】新型肺炎心理讲堂开课啦！权威专家帮您解惑",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200205/aa0747e9bf88fa199e5ef3d5dfe299fa.jpeg",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36978?uin=1648",
+        "url": "https://web.guangdianyun.tv/live/36978?uin=1648",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36145,
+        "createTime": 1580886362,
+        "title": "【浏阳】战“疫”宅在家 “宅”出好身体！",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200205/708961d64326e066960fd0a10af86100.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36967?uin=1556&from=timeline&isappinstalled=0",
+        "url": "https://web.guangdianyun.tv/live/36967?uin=1556&from=timeline&isappinstalled=0",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36106,
+        "createTime": 1580827476,
+        "title": "【尤溪】全力以赴 共同战“疫”—尤溪在行动",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/6b585fbd9cb7054c46519afbd8aaff60.png",
+        "articleType": 3,
+        "redirectLink": "https://live.yxxww.cn/live/36888?uin=2055&uid=MTAwMTA2NzgzOTdCVDY%3D&uuid=ffffffff-a8d4-1565-ffff-ffffef05ac4a&fxbs=1&from=singlemessage",
+        "url": "https://live.yxxww.cn/live/36888?uin=2055&uid=MTAwMTA2NzgzOTdCVDY%3D&uuid=ffffffff-a8d4-1565-ffff-ffffef05ac4a&fxbs=1&from=singlemessage",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36142,
+        "createTime": 1580875521,
+        "title": "【无线巴中】走“镜”抗疫前线 记者带你逛巴中市场",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200205/46f5482896cbf4e07946ece5056e7935.png",
+        "articleType": 3,
+        "redirectLink": "https://live.bzgd.com/live/36957?uin=1091&from=timeline&isappinstalled=0",
+        "url": "https://live.bzgd.com/live/36957?uin=1091&from=timeline&isappinstalled=0",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36143,
+        "createTime": 1580875701,
+        "title": "【长沙】慢直播｜合力战疫，长沙“菜篮子”保供应",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200205/f79ad4f0b12e02505f2ecd5a21d9944a.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36971?uin=1648&from=timeline&isappinstalled=0",
+        "url": "https://web.guangdianyun.tv/live/36971?uin=1648&from=timeline&isappinstalled=0",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36105,
+        "createTime": 1580819246,
+        "title": "【大庆全媒体直播】直击疫情防控第一线",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/8754354e5277985b9f7d7ecade08cc39.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36924?uin=1463",
+        "url": "https://web.guangdianyun.tv/live/36924?uin=1463",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36104,
+        "createTime": 1580819032,
+        "title": "【十堰】主播带你打探: 茅箭区全区休市歇业 生活物资咋配送?",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/a2de98a67239df7aa711c25cec8c7eed.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36950?uin=1318",
+        "url": "https://web.guangdianyun.tv/live/36950?uin=1318",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36103,
+        "createTime": 1580818843,
+        "title": "【智慧江都】国家卫健委介绍社会心理服务情况",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/d96ccca7810f119e5a04e8f531cc977c.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36918?uin=2698",
+        "url": "https://web.guangdianyun.tv/live/36918?uin=2698",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36102,
+        "createTime": 1580818738,
+        "title": "【象山】新型冠状病毒肺炎防控志愿者线上培训会",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/ccd4395accecf4450cf59b00ba355327.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36882?uin=1419",
+        "url": "https://web.guangdianyun.tv/live/36882?uin=1419",
+        "commentCount": 0
+      },
+      {
+        "articleId": 36101,
+        "createTime": 1580818580,
+        "title": "【泉州】与疫情赛跑—直击武汉雷神山医院建设最前线",
+        "coverImgType": 1,
+        "coverImg": "http://static-pro.guangdianyun.tv/2139/cms/20200204/13fb54064c02fec02cabcbddb433d6f4.png",
+        "articleType": 3,
+        "redirectLink": "https://web.guangdianyun.tv/live/36805?uin=1521",
+        "url": "https://web.guangdianyun.tv/live/36805?uin=1521",
+        "commentCount": 0
+      }
+    ],
+    "count": 54,
+    "type": "column"
+  }
+}
