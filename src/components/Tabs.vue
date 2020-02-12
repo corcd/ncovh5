@@ -10,14 +10,17 @@
       <!-- <van-tab title="相关直播">
         <Stream></Stream>
       </van-tab> -->
+      <van-tab title="实时播报">
+        <Timeline></Timeline>
+      </van-tab>
+      <van-tab title="病例分布">
+        <Community></Community>
+      </van-tab>
       <van-tab title="谣言终结">
         <Rumour></Rumour>
       </van-tab>
       <van-tab title="同程查询">
         <Ncovsame></Ncovsame>
-      </van-tab>
-      <van-tab title="实时播报">
-        <Timeline></Timeline>
       </van-tab>
       <!-- <van-tab title="查询工具">
         <Tools></Tools>
@@ -32,12 +35,13 @@ import Information from '@/components/Information'
 import Location from '@/components/Location'
 import Rumour from '@/components/Rumour'
 import Ncovsame from '@/components/Ncovsame'
+import Community from '@/components/Community'
 import Timeline from '@/components/Timeline'
 // import Tools from '@/components/Tools'
 
 export default {
   name: 'Tabs',
-  components: { Information, Location, Rumour, Ncovsame, Timeline },
+  components: { Information, Location, Rumour, Ncovsame, Community, Timeline },
   data() {
     return {
       active: 0
