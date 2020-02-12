@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="right">
-      <van-image width="160" radius="1" fit="fill" :src="poster" lazy-load>
+      <van-image width="140" radius="1" fit="fill" :src="poster" lazy-load>
         <template v-slot:loading>
           <van-loading type="spinner" size="20" />
         </template>

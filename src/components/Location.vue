@@ -3,7 +3,7 @@
     <div class="introduction">
       <div class="info-location">
         <van-tag class="tag" type="danger">
-          本地·{{ gdy.area ? gdy.area : '未公开' }}
+          {{ gdy.area ? gdy.area : '未公开' }}
         </van-tag>
       </div>
       <span class="info-time">截至 {{ getTime }} 地方媒体公布</span>
@@ -169,6 +169,12 @@ export default {
     align-items: center;
     padding: 2% 3.5%;
     background: #fff;
+
+    .info-location {
+      height: 22px;
+      display: flex;
+      align-items: center;
+    }
 
     .info-time {
       flex-grow: 1;

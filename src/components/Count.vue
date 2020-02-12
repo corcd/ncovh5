@@ -55,7 +55,7 @@ export default {
   .count {
     width: 100%;
     padding: 4% 0;
-    font-size: 130%;
+    font-size: 125%;
     font-weight: bold;
   }
 

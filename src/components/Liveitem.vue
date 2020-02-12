@@ -4,7 +4,7 @@
       <div class="icon">
         <div class="triangle"></div>
       </div>
-      <van-image width="178" radius="3" fit="fill" :src="poster" lazy-load>
+      <van-image width="160" radius="1" fit="fill" :src="poster" lazy-load>
         <template v-slot:loading>
           <van-loading type="spinner" size="20" />
         </template>
@@ -69,7 +69,7 @@ export default {
 <style lang="scss" scoped>
 .liveitem {
   width: 100%;
-  height: 100px;
+  height: 90px;
   display: flex;
   justify-content: space-between;
   margin: 5px 0;
@@ -81,7 +81,7 @@ export default {
   .left {
     position: relative;
     flex-shrink: 0;
-    width: 178px;
+    width: 160px;
     height: 100%;
 
     .icon {
@@ -134,7 +134,7 @@ export default {
       display: -webkit-box;
       -webkit-box-orient: vertical;
       color: #333;
-      font-size: 110%;
+      font-size: 100%;
       font-weight: bold;
       line-height: 120%;
       text-align: left;
@@ -151,7 +151,7 @@ export default {
       justify-content: space-between;
       align-items: flex-start;
       color: #999;
-      font-size: 90%;
+      font-size: 80%;
 
       .date {
         width: 100%;
