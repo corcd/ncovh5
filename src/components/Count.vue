@@ -1,7 +1,9 @@
 <template>
   <div class="count">
     <span class="title">{{ title }}</span>
-    <span class="count" :style="{ color: color }">{{ count }}</span>
+    <span class="count" :style="{ color: color }">{{
+      count >= 0 ? count : '未公开'
+    }}</span>
     <span class="incr" v-if="showinc">
       较昨日
       <span class="incr-count" :style="{ color: color }">+{{ incr }}</span>
@@ -55,13 +57,13 @@ export default {
   .count {
     width: 100%;
     padding: 4% 0;
-    font-size: 125%;
+    font-size: 140%;
     font-weight: bold;
   }
 
   .incr {
     width: 100%;
-    font-size: 20%;
+    font-size: 40%;
     color: #999999;
     transform: scale(0.9);
 

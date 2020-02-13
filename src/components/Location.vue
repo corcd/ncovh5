@@ -109,6 +109,13 @@ export default {
           showinc: false
         },
         {
+          title: '疑似',
+          count: this.gdy.suspectedCount,
+          incr: this.gdy.suspectedIncr,
+          color: '#f78207',
+          showinc: false
+        },
+        {
           title: '死亡',
           count: this.gdy.deadCount,
           incr: this.gdy.deadCountInc,
@@ -183,6 +190,7 @@ export default {
       justify-content: flex-end;
       align-items: center;
       font-size: 70%;
+      line-height: 180%;
       // text-align: right;
     }
   }

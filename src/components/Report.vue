@@ -6,25 +6,60 @@
       <div class="item-dead item-dead-title">死亡</div>
       <div class="item-cured item-cured-title">治愈</div>
     </div>
-    <div class="item" v-for="(item, index) in getCase" :key="index">
-      <div class="item-province">{{ item.provinceShortName }}</div>
-      <div class="item-confirmed">{{ item.confirmedCount }}</div>
-      <div class="item-dead">{{ item.deadCount }}</div>
-      <div class="item-cured">{{ item.curedCount }}</div>
+    <div class="item-group" v-for="(item, index) in getCase" :key="index">
+      <div class="item" @click="visible = index + 1">
+        <div
+          class="item-province"
+          :class="{ 'item-red': visible === index + 1 }"
+        >
+          {{ item.provinceShortName }}
+        </div>
+        <div
+          class="item-confirmed"
+          :class="{ 'item-red': visible === index + 1 }"
+        >
+          {{ item.confirmedCount }}
+        </div>
+        <div class="item-dead" :class="{ 'item-red': visible === index + 1 }">
+          {{ item.deadCount }}
+        </div>
+        <div class="item-cured" :class="{ 'item-red': visible === index + 1 }">
+          {{ item.curedCount }}
+        </div>
+      </div>
+      <div
+        class="item item-child"
+        v-for="(city, index) in getData(item.cities, index)"
+        :key="index"
+      >
+        <div class="item-province item-child">{{ city.cityName }}</div>
+        <div class="item-confirmed item-child">{{ city.confirmedCount }}</div>
+        <div class="item-dead item-child">{{ city.deadCount }}</div>
+        <div class="item-cured item-child">{{ city.curedCount }}</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-
 export default {
   name: 'Report',
+  data() {
+    return {
+      visible: 1
+    }
+  },
   computed: {
     ...mapState(['case']),
     getCase() {
       const arr = this.case ? this.case : []
       return arr
+    },
+    getData() {
+      return (list, index) => {
+        return this.visible === index + 1 ? list : []
+      }
     }
   }
 }
@@ -33,7 +68,13 @@ export default {
 <style lang="scss" scoped>
 .report {
   width: 100%;
-
+  .item-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
   .item {
     width: 100%;
     display: flex;
@@ -44,27 +85,28 @@ export default {
     line-height: 200%;
     background: #f7f7f7;
     border-top: 1px solid #e9e9e9;
-
     &:last-child {
       border-bottom: 1px solid #e9e9e9;
     }
-
+    .item-red {
+      color: #dc3131 !important;
+    }
+    .item-child {
+      font-size: 90% !important;
+      font-weight: normal !important;
+    }
     .item-province-title {
       background: #e4e7f2;
     }
-
     .item-confirmed-title {
       background: #ebbcb2;
     }
-
     .item-dead-title {
       background: #b6c0d3;
     }
-
     .item-cured-title {
       background: #80c99d;
     }
-
     .item-province {
       width: 40%;
       padding: 0 0 0 6%;
@@ -72,19 +114,16 @@ export default {
       border-left: 1px solid #fff;
       border-right: 1px solid #fff;
     }
-
     .item-confirmed {
       width: 20%;
       border-left: 1px solid #fff;
       border-right: 1px solid #fff;
     }
-
     .item-dead {
       width: 20%;
       border-left: 1px solid #fff;
       border-right: 1px solid #fff;
     }
-
     .item-cured {
       width: 20%;
       border-left: 1px solid #fff;
