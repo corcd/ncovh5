@@ -2,8 +2,7 @@
   <div class="location">
     <div class="introduction">
       <div class="info-location">
-        <van-tag class="tag" type="danger">本地</van-tag>
-        绍兴
+        <van-tag class="tag" type="danger">绍兴</van-tag>
       </div>
       <span class="info-time">截至 {{ getTime }} 地区卫健委统计</span>
     </div>
@@ -150,18 +149,22 @@ export default {
 
   .introduction {
     width: 100%;
+    height: 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .info-location {
-      font-size: 40%;
+      height: 22px;
+      font-size: 100%;
       font-weight: bold;
     }
 
     .info-time {
       flex-grow: 1;
-      font-size: 40%;
+      height: 100%;
+      font-size: 80%;
+      line-height: 180%;
       text-align: right;
     }
   }

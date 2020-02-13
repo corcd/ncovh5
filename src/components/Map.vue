@@ -33,7 +33,7 @@ export default {
           text: '全国疫情地图',
           subtext: '',
           textStyle: {
-            fontSize: 14
+            fontSize: 16
           },
           x: 'left'
         },

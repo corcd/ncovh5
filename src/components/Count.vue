@@ -43,7 +43,7 @@ export default {
 
   .title {
     width: 100%;
-    font-size: 80%;
+    font-size: 90%;
     color: #000;
     font-weight: bold;
   }
@@ -51,13 +51,13 @@ export default {
   .count {
     width: 100%;
     padding: 4% 0;
-    font-size: 120%;
-    font-weight: bold;
+    font-size: 140%;
+    font-weight: 800;
   }
 
   .incr {
     width: 100%;
-    font-size: 20%;
+    font-size: 40%;
     color: #999999;
     transform: scale(0.9);
 
