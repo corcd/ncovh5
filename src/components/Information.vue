@@ -152,7 +152,7 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2% 8%;
+    padding: 2% 5%;
   }
 
   .info-images {
