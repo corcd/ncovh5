@@ -49,7 +49,7 @@ export default {
   data() {
     return {
       center: { lng: 103.710338, lat: 31.812342 },
-      zoom: 6,
+      zoom: 3,
       mapStyle: {
         styleJson: [
           {
