@@ -1,9 +1,7 @@
 <template>
   <div class="count">
     <span class="title">{{ title }}</span>
-    <span class="count" :style="{ color: color }">{{
-      count >= 0 ? count : '未公开'
-    }}</span>
+    <span class="count" :style="{ color: color }">{{ getCount }}</span>
     <span class="incr" v-if="showinc">
       较昨日
       <span class="incr-count" :style="{ color: color }">+{{ incr }}</span>
@@ -15,6 +13,10 @@
 export default {
   name: 'Count',
   props: {
+    type: {
+      type: String,
+      default: 'national'
+    },
     title: {
       type: String,
       default: '标题'
@@ -27,6 +29,10 @@ export default {
       type: Number,
       default: 0
     },
+    enabled: {
+      type: String,
+      default: ''
+    },
     color: {
       type: String,
       default: '#f74c31'
@@ -34,6 +40,15 @@ export default {
     showinc: {
       type: Boolean,
       default: true
+    }
+  },
+  computed: {
+    getCount() {
+      if (this.type === 'local') {
+        return this.enabled === 'true' ? this.count : '-'
+      } else {
+        return this.count
+      }
     }
   }
 }

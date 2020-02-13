@@ -12,10 +12,12 @@
       <Count
         v-for="(item, index) in getCountInfo"
         :key="index"
+        type="local"
         :title="item.title"
         :count="item.count"
         :incr="item.incr"
         :color="item.color"
+        :enabled="item.enabled"
         :showinc="item.showinc"
       ></Count>
     </div>
@@ -105,6 +107,7 @@ export default {
           title: '确诊',
           count: this.gdy.confirmedCount,
           incr: this.gdy.confirmedCountInc,
+          enabled: this.gdy.confirmEnabled,
           color: '#f74c31',
           showinc: false
         },
@@ -112,6 +115,7 @@ export default {
           title: '疑似',
           count: this.gdy.suspectedCount,
           incr: this.gdy.suspectedIncr,
+          enabled: this.gdy.suspectedEnabled,
           color: '#f78207',
           showinc: false
         },
@@ -119,6 +123,7 @@ export default {
           title: '死亡',
           count: this.gdy.deadCount,
           incr: this.gdy.deadCountInc,
+          enabled: this.gdy.deadEnabled,
           color: '#5d7092',
           showinc: false
         },
@@ -126,6 +131,7 @@ export default {
           title: '治愈',
           count: this.gdy.curedCount,
           incr: this.gdy.curedCountInc,
+          enabled: this.gdy.curedEnabled,
           color: '#28b7a3',
           showinc: false
         }
