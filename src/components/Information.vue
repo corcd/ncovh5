@@ -5,7 +5,7 @@
     </div>
     <div class="tips">
       <div class="notice">
-        较昨日数据待国家卫健委公布
+        数据已按国家卫健委新标准统计
       </div>
     </div>
     <div class="info-count">
