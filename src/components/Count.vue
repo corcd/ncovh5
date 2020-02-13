@@ -4,7 +4,9 @@
     <span class="count" :style="{ color: color }">{{ count }}</span>
     <span class="incr">
       较昨日
-      <span class="incr-count" :style="{ color: color }">+{{ incr }}</span>
+      <span class="incr-count" :style="{ color: color }">
+        {{ incr > 0 ? '+' : '' }}{{ incr }}
+      </span>
     </span>
   </div>
 </template>
@@ -35,7 +37,7 @@ export default {
 
 <style lang="scss" scoped>
 .count {
-  width: 20%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +59,7 @@ export default {
 
   .incr {
     width: 100%;
-    font-size: 40%;
+    font-size: 30%;
     color: #999999;
     transform: scale(0.9);
 
