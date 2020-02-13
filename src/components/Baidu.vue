@@ -8,7 +8,7 @@
     :scroll-wheel-zoom="true"
   >
     <bm-geolocation
-      anchor="BMAP_ANCHOR_BOTTOM_RIGHT"
+      anchor="BMAP_ANCHOR_TOP_RIGHT"
       :showAddressBar="true"
       :autoLocation="true"
     ></bm-geolocation>
@@ -49,7 +49,7 @@ export default {
   data() {
     return {
       center: { lng: 103.710338, lat: 31.812342 },
-      zoom: 9,
+      zoom: 6,
       mapStyle: {
         styleJson: [
           {
