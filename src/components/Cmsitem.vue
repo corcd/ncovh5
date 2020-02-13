@@ -93,7 +93,7 @@ export default {
 
     .title {
       width: 100%;
-      height: 75%;
+      height: 50%;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       color: #333;
@@ -109,7 +109,7 @@ export default {
 
     .info {
       width: 100%;
-      height: 25%;
+      height: 50%;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
