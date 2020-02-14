@@ -100,13 +100,13 @@ export default {
 
     .title {
       width: 100%;
-      height: 50%;
+      height: 52px;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       color: #333;
       font-size: 110%;
       font-weight: 400;
-      line-height: 120%;
+      line-height: 150%;
       text-align: left;
       -webkit-line-clamp: 2;
       text-overflow: ellipsis;
@@ -117,7 +117,7 @@ export default {
         margin-right: 2px;
         padding: 2px 3px;
         color: #fff;
-        font-size: 70%;
+        font-size: 90%;
         font-weight: bold;
         background: #ed6964;
         border-radius: 1px;
