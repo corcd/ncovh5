@@ -29,7 +29,10 @@ export default {
     this.wxShareInfo = {
       title: '新型冠状病毒肺炎实时追踪',
       desc: this.gdy.desc,
-      imgUrl: this.desc.imgUrl
+      imgUrl: this.desc.imgUrl,
+      link: window.location.href,
+      // eslint-disable-next-line no-empty-function
+      success() {}
     }
     // console.log(this.$utils.isWx())
 
@@ -38,18 +41,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['desc', 'gdy']),
-    shareInfo() {
-      const json = {
-        link: window.location.href,
-        // eslint-disable-next-line no-empty-function
-        success() {},
-        // eslint-disable-next-line no-empty-function
-        fail() {}
-      }
-      const config = Object.assign(json, this.wxShareInfo)
-      return config
-    }
+    ...mapState(['desc', 'gdy'])
   },
   methods: {
     async getWxJsapiPackage() {
@@ -68,18 +60,17 @@ export default {
         timestamp: info.timestamp,
         nonceStr: info.nonceStr,
         signature: info.signature,
-        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage']
+        jsApiList: ['updateTimelineShareData', 'updateAppMessageShareData']
       })
       this.initWXShare()
     },
     initWXShare() {
       const that = this
       window.wx.ready(() => {
-        window.wx.onMenuShareTimeline(that.shareInfo) // 分享至好友
-        window.wx.onMenuShareAppMessage(that.shareInfo) // 分享至朋友圈
+        window.wx.updateTimelineShareData(that.wxShareInfo) // 分享至好友
+        window.wx.updateAppMessageShareData(that.wxShareInfo) // 分享至朋友圈
       })
       window.wx.error(err => {
-        // console.log(err)
         that.$toast.fail(err)
       })
     }
