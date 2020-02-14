@@ -93,7 +93,8 @@ export default {
         window.wx.onMenuShareAppMessage(that.shareInfo) // 分享至朋友圈
       })
       window.wx.error(err => {
-        console.log(err)
+        // console.log(err)
+        this.$toast.fail(err)
       })
     }
   }
