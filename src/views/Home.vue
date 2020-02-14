@@ -37,6 +37,7 @@ export default {
     // console.log(this.$utils.isWx())
 
     if (this.$utils.isWx()) {
+      this.initWXShare()
       this.getWxJsapiPackage()
     }
   },
@@ -62,7 +63,6 @@ export default {
         signature: info.signature,
         jsApiList: ['updateTimelineShareData', 'updateAppMessageShareData']
       })
-      this.initWXShare()
     },
     initWXShare() {
       const that = this
