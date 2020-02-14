@@ -64,6 +64,7 @@
           v-for="(item, index) in cmsList"
           :key="index"
           :title="item.title"
+          :categoryName="item.categoryName"
           :poster="item.cover"
           :date="item.createTime"
           :url="item.url"

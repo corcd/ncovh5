@@ -1,7 +1,10 @@
 <template>
   <div class="cmsitem" @click="link()">
     <div class="left">
-      <div class="title">{{ title }}</div>
+      <div class="title">
+        <span class="title-tag">{{ categoryName }}</span>
+        {{ title }}
+      </div>
       <div class="info">
         <div class="author">{{ getAuthor }}</div>
         <div class="date">{{ getTime }}</div>
@@ -26,6 +29,10 @@ export default {
     poster: {
       type: String,
       default: ''
+    },
+    categoryName: {
+      type: String,
+      default: '新闻'
     },
     title: {
       type: String,
@@ -87,7 +94,7 @@ export default {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding: 0 10px 0 0;
 
@@ -105,11 +112,21 @@ export default {
       text-overflow: ellipsis;
       white-space: wrap;
       overflow: hidden;
+
+      .title-tag {
+        margin-right: 2px;
+        padding: 2px 3px;
+        color: #fff;
+        font-size: 70%;
+        font-weight: bold;
+        background: #ed6964;
+        border-radius: 1px;
+      }
     }
 
     .info {
       width: 100%;
-      height: 50%;
+      height: 20%;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -117,21 +134,24 @@ export default {
       font-size: 80%;
 
       .author {
-        width: 50%;
+        width: 60%;
+        max-width: 60%;
         height: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        // text-align: left;
+        line-height: 140%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: left;
       }
 
       .date {
-        width: 50%;
+        width: 40%;
         height: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        // text-align: right;
+        line-height: 140%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: right;
       }
     }
   }

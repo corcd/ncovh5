@@ -138,7 +138,7 @@ export default {
       font-weight: bold;
       line-height: 120%;
       text-align: left;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       text-overflow: ellipsis;
       white-space: wrap;
       overflow: hidden;

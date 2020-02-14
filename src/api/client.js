@@ -20,6 +20,9 @@ const client = {
     return Request.get(`${base.gateWay}/c/cms/list`, {
       data
     })
+  },
+  getShareInfo(data) {
+    return Request.post(`${base.gateWay}/c/share`, data)
   }
 }
 
