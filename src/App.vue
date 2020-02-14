@@ -94,7 +94,7 @@ export default {
       })
       window.wx.error(err => {
         // console.log(err)
-        this.$toast.fail(err)
+        that.$toast.fail(err)
       })
     }
   }
