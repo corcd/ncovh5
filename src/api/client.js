@@ -22,7 +22,7 @@ const client = {
     })
   },
   getShareInfo(data) {
-    return Request.post(`${base.gateWay}/c/share`, data)
+    return Request.post(`${base.gateWay}/c/share`, data, { type: 'json' })
   }
 }
 

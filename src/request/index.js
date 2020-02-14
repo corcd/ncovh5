@@ -88,6 +88,9 @@ Request.interceptors.request.use(
   config => {
     // const token = store.state.token
     // config.headers.token = token
+    if (config.type === 'json') {
+      config.headers['Content-Type'] = 'application/json; charset=UTF-8'
+    }
     if (config.method === 'get') {
       const data = filterNull(config.data)
       config.params = data
