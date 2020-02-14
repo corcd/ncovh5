@@ -26,23 +26,25 @@ export default {
     }
   },
   mounted() {
-    this.wxShareInfo = {
-      title: '新型冠状病毒肺炎实时追踪',
-      desc: this.gdy.desc,
-      imgUrl: this.desc.imgUrl,
-      link: window.location.href,
-      // eslint-disable-next-line no-empty-function
-      success() {}
-    }
     // console.log(this.$utils.isWx())
-
     if (this.$utils.isWx()) {
       this.initWXShare()
       this.getWxJsapiPackage()
     }
   },
   computed: {
-    ...mapState(['desc', 'gdy'])
+    ...mapState(['desc', 'gdy']),
+    getShareInfo() {
+      const info = {
+        title: '新型冠状病毒肺炎实时追踪',
+        desc: this.gdy.desc,
+        imgUrl: this.desc.imgUrl,
+        link: window.location.href,
+        // eslint-disable-next-line no-empty-function
+        success() {}
+      }
+      return info
+    }
   },
   methods: {
     async getWxJsapiPackage() {
@@ -67,8 +69,8 @@ export default {
     initWXShare() {
       const that = this
       window.wx.ready(() => {
-        window.wx.updateTimelineShareData(that.wxShareInfo) // 分享至好友
-        window.wx.updateAppMessageShareData(that.wxShareInfo) // 分享至朋友圈
+        window.wx.updateTimelineShareData(that.getShareInfo) // 分享至好友
+        window.wx.updateAppMessageShareData(that.getShareInfo) // 分享至朋友圈
       })
       window.wx.error(err => {
         that.$toast.fail(err)
