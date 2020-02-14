@@ -19,11 +19,6 @@ export default {
   created() {
     this.getNcovInfo()
   },
-  mounted() {
-    if (this.$utils.getUA.isWx) {
-      this.getWxJsapiPackage()
-    }
-  },
   computed: {
     shareInfo() {
       const json = {
@@ -57,45 +52,7 @@ export default {
       this.setGdyData(gdyRes.data.data)
       this.setGlobalData(ncovRes.data.newslist[0])
       this.setCaseData(caseRes.data.newslist)
-      if (this.$utils.getUA.isWx) {
-        this.wxShareInfo = {
-          title: '新型冠状病毒肺炎实时追踪',
-          desc: gdyRes.data.data.desc,
-          imgUrl: ncovRes.data.newslist[0].desc.imgUrl
-        }
-        this.initWXShare()
-      }
       this.$toast.clear()
-    },
-    async getWxJsapiPackage() {
-      const uin = this.$utils.parseUrl('uin')
-      const data = {
-        uin: Number(uin),
-        herf: window.location.href
-      }
-      const res = await this.$api.client.getShareInfo(data)
-      this.initWXSDK(res.data.data)
-    },
-    initWXSDK(info) {
-      window.wx.config({
-        debug: false,
-        appId: info.appId,
-        timestamp: info.timestamp,
-        nonceStr: info.nonceStr,
-        signature: info.signature,
-        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage']
-      })
-    },
-    initWXShare() {
-      const that = this
-      window.wx.ready(() => {
-        window.wx.onMenuShareTimeline(that.shareInfo) // 分享至好友
-        window.wx.onMenuShareAppMessage(that.shareInfo) // 分享至朋友圈
-      })
-      window.wx.error(err => {
-        // console.log(err)
-        that.$toast.fail(err)
-      })
     }
   }
 }
