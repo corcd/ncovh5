@@ -31,7 +31,7 @@ export default {
       desc: this.gdy.desc,
       imgUrl: this.desc.imgUrl
     }
-    console.log(this.$utils.isWx())
+    // console.log(this.$utils.isWx())
 
     if (this.$utils.isWx()) {
       this.getWxJsapiPackage()
