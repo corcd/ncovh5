@@ -51,7 +51,7 @@ export default {
       const uin = this.$utils.parseUrl('uin')
       const data = {
         uin: Number(uin),
-        herf: window.location.href
+        url: window.location.href
       }
       const res = await this.$api.client.getShareInfo(data)
       this.initWXSDK(res.data.data)
