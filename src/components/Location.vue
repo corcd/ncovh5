@@ -145,7 +145,7 @@ export default {
       const data = {
         uin: uin,
         page: 1,
-        num: 100
+        num: 50
       }
       const res = await this.$api.client.liveList(data)
       this.liveList = [...res.data.data.list]
@@ -155,7 +155,7 @@ export default {
       const data = {
         uin: uin,
         page: 1,
-        num: 100
+        num: 50
       }
       const res = await this.$api.client.cmsList(data)
       this.cmsList = [...res.data.data.list]
